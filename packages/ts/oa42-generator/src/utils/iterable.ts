@@ -24,7 +24,9 @@ export function* splitIterableText(texts: Iterable<string>, separator = /\r?\n/)
     yield* flush();
   }
 
-  if (buffer.length > 0) yield buffer;
+  if (buffer.length > 0) {
+    yield buffer;
+  }
 
   function* flush() {
     while (true) {

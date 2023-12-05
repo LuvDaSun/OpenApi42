@@ -1,14 +1,4 @@
-.*
-
-!.gitignore
-!.prettierignore
-!.editorconfig
-!.npmrc
-
-node_modules/
 out/
-coverage/
-
-!.vscode/
-!.github/
-
+projects/ts/schema-swagger-v2
+projects/ts/schema-oas-v3-0
+projects/ts/schema-oas-v3-1

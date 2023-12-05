@@ -66,7 +66,8 @@
         "--package-name",
         "github",
         "--package-version",
-        "0.0.0"
+        "0.0.0",
+        "--any-of-hack"
       ],
       "cwd": "${workspaceFolder}",
       "sourceMaps": true,

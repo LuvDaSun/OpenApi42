@@ -1,15 +1,15 @@
 {
   "private": true,
   "workspaces": [
-    "packages/ts/oa42-lib",
-    "packages/ts/oa42-generator"
+    "packages/ts/*"
   ],
   "scripts": {
     "spelling": "cspell",
     "formatting": "prettier --check *"
   },
   "devDependencies": {
-    "cspell": "^8.0.0",
+    "cspell": "^8.1.2",
+    "jns42-generator": "^0.9.6",
     "prettier": "^3.1.0"
   }
 }

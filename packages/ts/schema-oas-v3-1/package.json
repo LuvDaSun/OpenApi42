@@ -1,0 +1,40 @@
+{
+  "name": "schema-oas-v3-1",
+  "version": "0.0.0",
+  "sideEffects": false,
+  "type": "module",
+  "main": "./out/main.js",
+  "types": "./out/main.d.ts",
+  "files": [
+    "./src/*",
+    "./out/*"
+  ],
+  "exports": {
+    ".": {
+      "default": "./out/main.js"
+    },
+    "./types": {
+      "default": "./out/types.js"
+    },
+    "./validators": {
+      "default": "./out/validators.js"
+    },
+    "./parsers": {
+      "default": "./out/parsers.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc --build",
+    "clean": "rm -rf ./out && tsc --build --clean",
+    "test": "node --test ./out/*.test.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/node": "^20.10.3"
+  },
+  "devDependencies": {
+    "@tsconfig/node20": "^20.1.2",
+    "typescript": "^5.3.2"
+  }
+}

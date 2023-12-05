@@ -1,8 +1,8 @@
-import * as oas from "@jns42/jns42-schema-oas-v3-0";
 import { methods } from "oa42-lib";
+import * as oas from "schema-oas-v3-0";
 import { appendToPointer } from "../../utils/pointer.js";
 
-export function selectSchemas(pointer: string, document: oas.Schema20210928) {
+export function selectSchemas(pointer: string, document: oas.SchemaDocument) {
   return selectFromDocument(pointer);
 
   function* selectFromDocument(pointer: string) {
@@ -97,10 +97,7 @@ export function selectSchemas(pointer: string, document: oas.Schema20210928) {
     }
   }
 
-  function* selectFromRequestBody(
-    pointer: string,
-    requestBodyObject: oas.OperationPropertiesRequestBody,
-  ) {
+  function* selectFromRequestBody(pointer: string, requestBodyObject: oas.RequestBodiesAZAZ09) {
     if (oas.isReference(requestBodyObject)) {
       return;
     }

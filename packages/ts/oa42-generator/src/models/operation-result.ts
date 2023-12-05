@@ -4,6 +4,7 @@ import { Parameter } from "./parameter.js";
 
 export interface OperationResult {
   uri: URL;
+  description: string;
   statusKind: string;
   statusCodes: StatusCode[];
   headerParameters: Parameter[];

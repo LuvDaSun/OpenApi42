@@ -1,4 +1,4 @@
-import * as swagger2 from "@jns42/jns42-schema-swagger-v2";
+import * as swagger2 from "schema-swagger-v2";
 import { DocumentInitializer } from "../document-context.js";
 import { Document } from "./document.js";
 

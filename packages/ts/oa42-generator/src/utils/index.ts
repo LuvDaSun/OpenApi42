@@ -1,4 +1,3 @@
-export * from "./async.js";
 export * from "./banner.js";
 export * from "./iterable-text-template.js";
 export * from "./iterable.js";

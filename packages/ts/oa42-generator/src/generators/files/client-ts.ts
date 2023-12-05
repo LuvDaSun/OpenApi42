@@ -52,7 +52,19 @@ export function* generateClientTsCode(apiModel: models.Api) {
 
       const operationIncomingResponseName = toPascal(operationModel.name, "incoming", "response");
 
+      const jsDoc = [
+        operationModel.deprecated ? "@deprecated" : "",
+        operationModel.summary,
+        operationModel.description,
+      ]
+        .map((line) => line.trim())
+        .filter((line) => line.length > 0)
+        .join("\n");
+
       yield itt`
+        /**
+          ${jsDoc}
+         */
         export async function ${operationFunctionName}(
           outgoingRequest: ${operationOutgoingRequestName},
           credentials: unknown,

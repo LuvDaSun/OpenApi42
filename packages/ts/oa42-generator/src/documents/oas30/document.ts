@@ -1,33 +1,31 @@
-import * as intermediateB from "@jns42/jns42-schema-intermediate-b";
-import * as oas from "@jns42/jns42-schema-oas-v3-0";
 import { Router } from "goodrouter";
 import * as jns42generator from "jns42-generator";
 import { Namer } from "jns42-generator";
 import { Method, StatusCode, methods, statusCodes } from "oa42-lib";
+import * as oas from "schema-oas-v3-0";
 import * as models from "../../models/index.js";
 import {
   appendToUriHash,
   normalizeUrl,
   statusKindComparer,
   takeStatusCodes,
-  toArrayAsync,
 } from "../../utils/index.js";
 import { DocumentBase } from "../document-base.js";
 import { selectSchemas } from "./selectors.js";
 
-export class Document extends DocumentBase<oas.Schema20210928> {
+export class Document extends DocumentBase<oas.SchemaDocument> {
   public async getApiModel(): Promise<models.Api> {
     const uri = this.documentUri;
 
     const paths = [...this.getPathModels()];
     const authentication = [...this.getAuthenticationModels()];
-    const schemas = Object.fromEntries(await toArrayAsync(this.getSchemas()));
+    const schemas = Object.fromEntries(await this.getSchemas());
     const router = new Router<number>();
     for (const pathModel of paths) {
       router.insertRoute(pathModel.id, pathModel.pattern);
     }
 
-    const namer = new Namer(this.options.rootNamePart);
+    const namer = new Namer(this.options.defaultName, this.options.namerMaximumIterations);
     for (const nodeId in schemas) {
       const nodeUrl = new URL(nodeId);
       const path = nodeUrl.pathname + nodeUrl.hash.replace(/^#/g, "");
@@ -158,6 +156,9 @@ export class Document extends DocumentBase<oas.Schema20210928> {
       uri: operationUri,
       method,
       name: operationItem.operationId ?? "",
+      deprecated: operationItem.deprecated ?? false,
+      summary: operationItem.summary ?? "",
+      description: operationItem.description ?? "",
       queryParameters,
       headerParameters,
       pathParameters,
@@ -234,6 +235,7 @@ export class Document extends DocumentBase<oas.Schema20210928> {
 
     return {
       uri: responseUri,
+      description: responseItem.description,
       statusKind,
       statusCodes,
       headerParameters,
@@ -273,7 +275,8 @@ export class Document extends DocumentBase<oas.Schema20210928> {
     };
   }
 
-  private async *getSchemas(): AsyncIterable<readonly [string, intermediateB.Node]> {
+  // TODO
+  private async getSchemas(): Promise<Iterable<readonly [string, any]>> {
     const documentContext = new jns42generator.DocumentContext();
 
     documentContext.registerFactory(
@@ -300,9 +303,9 @@ export class Document extends DocumentBase<oas.Schema20210928> {
         this.documentNode,
         jns42generator.schemaDraft04.metaSchemaId,
       );
-
-      yield* documentContext.getIntermediateSchemaEntries();
     }
+
+    return documentContext.getIntermediateSchemaEntries();
   }
 
   private *getBodyModels(

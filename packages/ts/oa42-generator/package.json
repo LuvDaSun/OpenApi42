@@ -5,7 +5,7 @@
   "description": "",
   "type": "module",
   "bin": {
-    "oa42-generator": "./out/program.js"
+    "oa42-generator": "bin/oa42-generator"
   },
   "main": "./out/main.js",
   "types": "./out/main.d.ts",
@@ -14,7 +14,9 @@
     "./src/**/*"
   ],
   "scripts": {
-    "build": "tsc --build && chmod +x out/program.js",
+    "prepack": "npm install --no-workspaces",
+    "prepare": "tsc --build",
+    "build": "tsc --build",
     "clean": "rm -rf out",
     "test": "node --test ./out/**/*.test.js",
     "lint": "prettier --check *",
@@ -34,17 +36,17 @@
     "generator"
   ],
   "dependencies": {
-    "@jns42/jns42-schema-oas-v3-0": "^0.1.4",
-    "@jns42/jns42-schema-oas-v3-1": "^0.1.4",
-    "@jns42/jns42-schema-swagger-v2": "^0.1.6",
-    "@types/node": "^20.9.3",
+    "@types/node": "^20.10.3",
     "@types/yargs": "^17.0.32",
     "camelcase": "^8.0.0",
     "goodrouter": "^2.1.2",
-    "jns42-generator": "^0.8.6",
-    "oa42-lib": "^0.4.5",
+    "jns42-generator": "^0.9.3",
+    "oa42-lib": "^0.4.6",
+    "schema-oas-v3-0": "file:../schema-oas-v3-0",
+    "schema-oas-v3-1": "file:../schema-oas-v3-1",
+    "schema-swagger-v2": "file:../schema-swagger-v2",
     "tslib": "^2.6.2",
-    "type-fest": "^4.8.1",
+    "type-fest": "^4.8.3",
     "typescript": "^5.3.2",
     "yaml": "^2.3.4",
     "yargs": "^17.7.2"
@@ -52,5 +54,10 @@
   "devDependencies": {
     "@tsconfig/node20": "^20.1.2",
     "typescript": "^5.3.2"
-  }
+  },
+  "bundleDependencies": [
+    "schema-oas-v3-0",
+    "schema-oas-v3-1",
+    "schema-swagger-v2"
+  ]
 }

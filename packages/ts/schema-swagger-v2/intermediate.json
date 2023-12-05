@@ -1,0 +1,5341 @@
+{
+  "$schema": "https://schema.JsonSchema42.org/jns42-intermediate/schema.json",
+  "schemas": {
+    "http://swagger.io/v2/schema.json#": {
+      "deprecated": false,
+      "title": "A JSON Schema for Swagger 2.0 API.",
+      "description": "",
+      "examples": [],
+      "types": [
+        "map"
+      ],
+      "uniqueItems": false,
+      "required": [
+        "swagger",
+        "info",
+        "paths"
+      ],
+      "objectProperties": {
+        "swagger": "http://swagger.io/v2/schema.json#/properties/swagger",
+        "info": "http://swagger.io/v2/schema.json#/properties/info",
+        "host": "http://swagger.io/v2/schema.json#/properties/host",
+        "basePath": "http://swagger.io/v2/schema.json#/properties/basePath",
+        "schemes": "http://swagger.io/v2/schema.json#/properties/schemes",
+        "consumes": "http://swagger.io/v2/schema.json#/properties/consumes",
+        "produces": "http://swagger.io/v2/schema.json#/properties/produces",
+        "paths": "http://swagger.io/v2/schema.json#/properties/paths",
+        "definitions": "http://swagger.io/v2/schema.json#/properties/definitions",
+        "parameters": "http://swagger.io/v2/schema.json#/properties/parameters",
+        "responses": "http://swagger.io/v2/schema.json#/properties/responses",
+        "security": "http://swagger.io/v2/schema.json#/properties/security",
+        "securityDefinitions": "http://swagger.io/v2/schema.json#/properties/securityDefinitions",
+        "tags": "http://swagger.io/v2/schema.json#/properties/tags",
+        "externalDocs": "http://swagger.io/v2/schema.json#/properties/externalDocs"
+      },
+      "mapProperties": "http://swagger.io/v2/schema.json#/additionalProperties",
+      "patternProperties": {
+        "^x-": "http://swagger.io/v2/schema.json#/patternProperties/^x-"
+      }
+    },
+    "http://swagger.io/v2/schema.json#/definitions/info": {
+      "deprecated": false,
+      "title": "",
+      "description": "General information about the API.",
+      "examples": [],
+      "types": [
+        "map"
+      ],
+      "uniqueItems": false,
+      "required": [
+        "version",
+        "title"
+      ],
+      "objectProperties": {
+        "title": "http://swagger.io/v2/schema.json#/definitions/info/properties/title",
+        "version": "http://swagger.io/v2/schema.json#/definitions/info/properties/version",
+        "description": "http://swagger.io/v2/schema.json#/definitions/info/properties/description",
+        "termsOfService": "http://swagger.io/v2/schema.json#/definitions/info/properties/termsOfService",
+        "contact": "http://swagger.io/v2/schema.json#/definitions/info/properties/contact",
+        "license": "http://swagger.io/v2/schema.json#/definitions/info/properties/license"
+      },
+      "mapProperties": "http://swagger.io/v2/schema.json#/definitions/info/additionalProperties",
+      "patternProperties": {
+        "^x-": "http://swagger.io/v2/schema.json#/definitions/info/patternProperties/^x-"
+      }
+    },
+    "http://swagger.io/v2/schema.json#/definitions/contact": {
+      "deprecated": false,
+      "title": "",
+      "description": "Contact information for the owners of the API.",
+      "examples": [],
+      "types": [
+        "map"
+      ],
+      "uniqueItems": false,
+      "required": [],
+      "objectProperties": {
+        "name": "http://swagger.io/v2/schema.json#/definitions/contact/properties/name",
+        "url": "http://swagger.io/v2/schema.json#/definitions/contact/properties/url",
+        "email": "http://swagger.io/v2/schema.json#/definitions/contact/properties/email"
+      },
+      "mapProperties": "http://swagger.io/v2/schema.json#/definitions/contact/additionalProperties",
+      "patternProperties": {
+        "^x-": "http://swagger.io/v2/schema.json#/definitions/contact/patternProperties/^x-"
+      }
+    },
+    "http://swagger.io/v2/schema.json#/definitions/license": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [
+        "map"
+      ],
+      "uniqueItems": false,
+      "required": [
+        "name"
+      ],
+      "objectProperties": {
+        "name": "http://swagger.io/v2/schema.json#/definitions/license/properties/name",
+        "url": "http://swagger.io/v2/schema.json#/definitions/license/properties/url"
+      },
+      "mapProperties": "http://swagger.io/v2/schema.json#/definitions/license/additionalProperties",
+      "patternProperties": {
+        "^x-": "http://swagger.io/v2/schema.json#/definitions/license/patternProperties/^x-"
+      }
+    },
+    "http://swagger.io/v2/schema.json#/definitions/paths": {
+      "deprecated": false,
+      "title": "",
+      "description": "Relative paths to the individual endpoints. They must be relative to the 'basePath'.",
+      "examples": [],
+      "types": [
+        "map"
+      ],
+      "uniqueItems": false,
+      "required": [],
+      "mapProperties": "http://swagger.io/v2/schema.json#/definitions/paths/additionalProperties",
+      "patternProperties": {
+        "^x-": "http://swagger.io/v2/schema.json#/definitions/paths/patternProperties/^x-",
+        "^/": "http://swagger.io/v2/schema.json#/definitions/paths/patternProperties/^/"
+      }
+    },
+    "http://swagger.io/v2/schema.json#/definitions/definitions": {
+      "deprecated": false,
+      "title": "",
+      "description": "One or more JSON objects describing the schemas being consumed and produced by the API.",
+      "examples": [],
+      "types": [
+        "map"
+      ],
+      "uniqueItems": false,
+      "required": [],
+      "mapProperties": "http://swagger.io/v2/schema.json#/definitions/definitions/additionalProperties"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/parameterDefinitions": {
+      "deprecated": false,
+      "title": "",
+      "description": "One or more JSON representations for parameters",
+      "examples": [],
+      "types": [
+        "map"
+      ],
+      "uniqueItems": false,
+      "required": [],
+      "mapProperties": "http://swagger.io/v2/schema.json#/definitions/parameterDefinitions/additionalProperties"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/responseDefinitions": {
+      "deprecated": false,
+      "title": "",
+      "description": "One or more JSON representations for parameters",
+      "examples": [],
+      "types": [
+        "map"
+      ],
+      "uniqueItems": false,
+      "required": [],
+      "mapProperties": "http://swagger.io/v2/schema.json#/definitions/responseDefinitions/additionalProperties"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/externalDocs": {
+      "deprecated": false,
+      "title": "",
+      "description": "information about external documentation",
+      "examples": [],
+      "types": [
+        "map"
+      ],
+      "uniqueItems": false,
+      "required": [
+        "url"
+      ],
+      "objectProperties": {
+        "description": "http://swagger.io/v2/schema.json#/definitions/externalDocs/properties/description",
+        "url": "http://swagger.io/v2/schema.json#/definitions/externalDocs/properties/url"
+      },
+      "mapProperties": "http://swagger.io/v2/schema.json#/definitions/externalDocs/additionalProperties",
+      "patternProperties": {
+        "^x-": "http://swagger.io/v2/schema.json#/definitions/externalDocs/patternProperties/^x-"
+      }
+    },
+    "http://swagger.io/v2/schema.json#/definitions/examples": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [
+        "map"
+      ],
+      "uniqueItems": false,
+      "required": [],
+      "mapProperties": "http://swagger.io/v2/schema.json#/definitions/examples/additionalProperties"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/mimeType": {
+      "deprecated": false,
+      "title": "",
+      "description": "The MIME type of the HTTP message.",
+      "examples": [],
+      "types": [
+        "string"
+      ],
+      "uniqueItems": false,
+      "required": []
+    },
+    "http://swagger.io/v2/schema.json#/definitions/operation": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [
+        "map"
+      ],
+      "uniqueItems": false,
+      "required": [
+        "responses"
+      ],
+      "objectProperties": {
+        "tags": "http://swagger.io/v2/schema.json#/definitions/operation/properties/tags",
+        "summary": "http://swagger.io/v2/schema.json#/definitions/operation/properties/summary",
+        "description": "http://swagger.io/v2/schema.json#/definitions/operation/properties/description",
+        "externalDocs": "http://swagger.io/v2/schema.json#/definitions/operation/properties/externalDocs",
+        "operationId": "http://swagger.io/v2/schema.json#/definitions/operation/properties/operationId",
+        "produces": "http://swagger.io/v2/schema.json#/definitions/operation/properties/produces",
+        "consumes": "http://swagger.io/v2/schema.json#/definitions/operation/properties/consumes",
+        "parameters": "http://swagger.io/v2/schema.json#/definitions/operation/properties/parameters",
+        "responses": "http://swagger.io/v2/schema.json#/definitions/operation/properties/responses",
+        "schemes": "http://swagger.io/v2/schema.json#/definitions/operation/properties/schemes",
+        "deprecated": "http://swagger.io/v2/schema.json#/definitions/operation/properties/deprecated",
+        "security": "http://swagger.io/v2/schema.json#/definitions/operation/properties/security"
+      },
+      "mapProperties": "http://swagger.io/v2/schema.json#/definitions/operation/additionalProperties",
+      "patternProperties": {
+        "^x-": "http://swagger.io/v2/schema.json#/definitions/operation/patternProperties/^x-"
+      }
+    },
+    "http://swagger.io/v2/schema.json#/definitions/pathItem": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [
+        "map"
+      ],
+      "uniqueItems": false,
+      "required": [],
+      "objectProperties": {
+        "$ref": "http://swagger.io/v2/schema.json#/definitions/pathItem/properties/$ref",
+        "get": "http://swagger.io/v2/schema.json#/definitions/pathItem/properties/get",
+        "put": "http://swagger.io/v2/schema.json#/definitions/pathItem/properties/put",
+        "post": "http://swagger.io/v2/schema.json#/definitions/pathItem/properties/post",
+        "delete": "http://swagger.io/v2/schema.json#/definitions/pathItem/properties/delete",
+        "options": "http://swagger.io/v2/schema.json#/definitions/pathItem/properties/options",
+        "head": "http://swagger.io/v2/schema.json#/definitions/pathItem/properties/head",
+        "patch": "http://swagger.io/v2/schema.json#/definitions/pathItem/properties/patch",
+        "parameters": "http://swagger.io/v2/schema.json#/definitions/pathItem/properties/parameters"
+      },
+      "mapProperties": "http://swagger.io/v2/schema.json#/definitions/pathItem/additionalProperties",
+      "patternProperties": {
+        "^x-": "http://swagger.io/v2/schema.json#/definitions/pathItem/patternProperties/^x-"
+      }
+    },
+    "http://swagger.io/v2/schema.json#/definitions/responses": {
+      "deprecated": false,
+      "title": "",
+      "description": "Response objects names can either be any valid HTTP status code or 'default'.",
+      "examples": [],
+      "types": [
+        "map"
+      ],
+      "uniqueItems": false,
+      "minimumProperties": 1,
+      "required": [],
+      "not": "http://swagger.io/v2/schema.json#/definitions/responses/not",
+      "mapProperties": "http://swagger.io/v2/schema.json#/definitions/responses/additionalProperties",
+      "patternProperties": {
+        "^([0-9]{3})$|^(default)$": "http://swagger.io/v2/schema.json#/definitions/responses/patternProperties/^([0-9]{3})$|^(default)$",
+        "^x-": "http://swagger.io/v2/schema.json#/definitions/responses/patternProperties/^x-"
+      }
+    },
+    "http://swagger.io/v2/schema.json#/definitions/responseValue": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "oneOf": [
+        "http://swagger.io/v2/schema.json#/definitions/responseValue/oneOf/0",
+        "http://swagger.io/v2/schema.json#/definitions/responseValue/oneOf/1"
+      ]
+    },
+    "http://swagger.io/v2/schema.json#/definitions/response": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [
+        "map"
+      ],
+      "uniqueItems": false,
+      "required": [
+        "description"
+      ],
+      "objectProperties": {
+        "description": "http://swagger.io/v2/schema.json#/definitions/response/properties/description",
+        "schema": "http://swagger.io/v2/schema.json#/definitions/response/properties/schema",
+        "headers": "http://swagger.io/v2/schema.json#/definitions/response/properties/headers",
+        "examples": "http://swagger.io/v2/schema.json#/definitions/response/properties/examples"
+      },
+      "mapProperties": "http://swagger.io/v2/schema.json#/definitions/response/additionalProperties",
+      "patternProperties": {
+        "^x-": "http://swagger.io/v2/schema.json#/definitions/response/patternProperties/^x-"
+      }
+    },
+    "http://swagger.io/v2/schema.json#/definitions/headers": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [
+        "map"
+      ],
+      "uniqueItems": false,
+      "required": [],
+      "mapProperties": "http://swagger.io/v2/schema.json#/definitions/headers/additionalProperties"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/header": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [
+        "map"
+      ],
+      "uniqueItems": false,
+      "required": [
+        "type"
+      ],
+      "objectProperties": {
+        "type": "http://swagger.io/v2/schema.json#/definitions/header/properties/type",
+        "format": "http://swagger.io/v2/schema.json#/definitions/header/properties/format",
+        "items": "http://swagger.io/v2/schema.json#/definitions/header/properties/items",
+        "collectionFormat": "http://swagger.io/v2/schema.json#/definitions/header/properties/collectionFormat",
+        "default": "http://swagger.io/v2/schema.json#/definitions/header/properties/default",
+        "maximum": "http://swagger.io/v2/schema.json#/definitions/header/properties/maximum",
+        "exclusiveMaximum": "http://swagger.io/v2/schema.json#/definitions/header/properties/exclusiveMaximum",
+        "minimum": "http://swagger.io/v2/schema.json#/definitions/header/properties/minimum",
+        "exclusiveMinimum": "http://swagger.io/v2/schema.json#/definitions/header/properties/exclusiveMinimum",
+        "maxLength": "http://swagger.io/v2/schema.json#/definitions/header/properties/maxLength",
+        "minLength": "http://swagger.io/v2/schema.json#/definitions/header/properties/minLength",
+        "pattern": "http://swagger.io/v2/schema.json#/definitions/header/properties/pattern",
+        "maxItems": "http://swagger.io/v2/schema.json#/definitions/header/properties/maxItems",
+        "minItems": "http://swagger.io/v2/schema.json#/definitions/header/properties/minItems",
+        "uniqueItems": "http://swagger.io/v2/schema.json#/definitions/header/properties/uniqueItems",
+        "enum": "http://swagger.io/v2/schema.json#/definitions/header/properties/enum",
+        "multipleOf": "http://swagger.io/v2/schema.json#/definitions/header/properties/multipleOf",
+        "description": "http://swagger.io/v2/schema.json#/definitions/header/properties/description"
+      },
+      "mapProperties": "http://swagger.io/v2/schema.json#/definitions/header/additionalProperties",
+      "patternProperties": {
+        "^x-": "http://swagger.io/v2/schema.json#/definitions/header/patternProperties/^x-"
+      }
+    },
+    "http://swagger.io/v2/schema.json#/definitions/vendorExtension": {
+      "deprecated": false,
+      "title": "",
+      "description": "Any property starting with x- is valid.",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "arrayItems": "http://swagger.io/v2/schema.json#/definitions/vendorExtension/additionalItems",
+      "mapProperties": "http://swagger.io/v2/schema.json#/definitions/vendorExtension/additionalProperties"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/bodyParameter": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [
+        "map"
+      ],
+      "uniqueItems": false,
+      "required": [
+        "name",
+        "in",
+        "schema"
+      ],
+      "objectProperties": {
+        "description": "http://swagger.io/v2/schema.json#/definitions/bodyParameter/properties/description",
+        "name": "http://swagger.io/v2/schema.json#/definitions/bodyParameter/properties/name",
+        "in": "http://swagger.io/v2/schema.json#/definitions/bodyParameter/properties/in",
+        "required": "http://swagger.io/v2/schema.json#/definitions/bodyParameter/properties/required",
+        "schema": "http://swagger.io/v2/schema.json#/definitions/bodyParameter/properties/schema"
+      },
+      "mapProperties": "http://swagger.io/v2/schema.json#/definitions/bodyParameter/additionalProperties",
+      "patternProperties": {
+        "^x-": "http://swagger.io/v2/schema.json#/definitions/bodyParameter/patternProperties/^x-"
+      }
+    },
+    "http://swagger.io/v2/schema.json#/definitions/headerParameterSubSchema": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [
+        "map"
+      ],
+      "uniqueItems": false,
+      "required": [],
+      "objectProperties": {
+        "required": "http://swagger.io/v2/schema.json#/definitions/headerParameterSubSchema/properties/required",
+        "in": "http://swagger.io/v2/schema.json#/definitions/headerParameterSubSchema/properties/in",
+        "description": "http://swagger.io/v2/schema.json#/definitions/headerParameterSubSchema/properties/description",
+        "name": "http://swagger.io/v2/schema.json#/definitions/headerParameterSubSchema/properties/name",
+        "type": "http://swagger.io/v2/schema.json#/definitions/headerParameterSubSchema/properties/type",
+        "format": "http://swagger.io/v2/schema.json#/definitions/headerParameterSubSchema/properties/format",
+        "items": "http://swagger.io/v2/schema.json#/definitions/headerParameterSubSchema/properties/items",
+        "collectionFormat": "http://swagger.io/v2/schema.json#/definitions/headerParameterSubSchema/properties/collectionFormat",
+        "default": "http://swagger.io/v2/schema.json#/definitions/headerParameterSubSchema/properties/default",
+        "maximum": "http://swagger.io/v2/schema.json#/definitions/headerParameterSubSchema/properties/maximum",
+        "exclusiveMaximum": "http://swagger.io/v2/schema.json#/definitions/headerParameterSubSchema/properties/exclusiveMaximum",
+        "minimum": "http://swagger.io/v2/schema.json#/definitions/headerParameterSubSchema/properties/minimum",
+        "exclusiveMinimum": "http://swagger.io/v2/schema.json#/definitions/headerParameterSubSchema/properties/exclusiveMinimum",
+        "maxLength": "http://swagger.io/v2/schema.json#/definitions/headerParameterSubSchema/properties/maxLength",
+        "minLength": "http://swagger.io/v2/schema.json#/definitions/headerParameterSubSchema/properties/minLength",
+        "pattern": "http://swagger.io/v2/schema.json#/definitions/headerParameterSubSchema/properties/pattern",
+        "maxItems": "http://swagger.io/v2/schema.json#/definitions/headerParameterSubSchema/properties/maxItems",
+        "minItems": "http://swagger.io/v2/schema.json#/definitions/headerParameterSubSchema/properties/minItems",
+        "uniqueItems": "http://swagger.io/v2/schema.json#/definitions/headerParameterSubSchema/properties/uniqueItems",
+        "enum": "http://swagger.io/v2/schema.json#/definitions/headerParameterSubSchema/properties/enum",
+        "multipleOf": "http://swagger.io/v2/schema.json#/definitions/headerParameterSubSchema/properties/multipleOf"
+      },
+      "mapProperties": "http://swagger.io/v2/schema.json#/definitions/headerParameterSubSchema/additionalProperties",
+      "patternProperties": {
+        "^x-": "http://swagger.io/v2/schema.json#/definitions/headerParameterSubSchema/patternProperties/^x-"
+      }
+    },
+    "http://swagger.io/v2/schema.json#/definitions/queryParameterSubSchema": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [
+        "map"
+      ],
+      "uniqueItems": false,
+      "required": [],
+      "objectProperties": {
+        "required": "http://swagger.io/v2/schema.json#/definitions/queryParameterSubSchema/properties/required",
+        "in": "http://swagger.io/v2/schema.json#/definitions/queryParameterSubSchema/properties/in",
+        "description": "http://swagger.io/v2/schema.json#/definitions/queryParameterSubSchema/properties/description",
+        "name": "http://swagger.io/v2/schema.json#/definitions/queryParameterSubSchema/properties/name",
+        "allowEmptyValue": "http://swagger.io/v2/schema.json#/definitions/queryParameterSubSchema/properties/allowEmptyValue",
+        "type": "http://swagger.io/v2/schema.json#/definitions/queryParameterSubSchema/properties/type",
+        "format": "http://swagger.io/v2/schema.json#/definitions/queryParameterSubSchema/properties/format",
+        "items": "http://swagger.io/v2/schema.json#/definitions/queryParameterSubSchema/properties/items",
+        "collectionFormat": "http://swagger.io/v2/schema.json#/definitions/queryParameterSubSchema/properties/collectionFormat",
+        "default": "http://swagger.io/v2/schema.json#/definitions/queryParameterSubSchema/properties/default",
+        "maximum": "http://swagger.io/v2/schema.json#/definitions/queryParameterSubSchema/properties/maximum",
+        "exclusiveMaximum": "http://swagger.io/v2/schema.json#/definitions/queryParameterSubSchema/properties/exclusiveMaximum",
+        "minimum": "http://swagger.io/v2/schema.json#/definitions/queryParameterSubSchema/properties/minimum",
+        "exclusiveMinimum": "http://swagger.io/v2/schema.json#/definitions/queryParameterSubSchema/properties/exclusiveMinimum",
+        "maxLength": "http://swagger.io/v2/schema.json#/definitions/queryParameterSubSchema/properties/maxLength",
+        "minLength": "http://swagger.io/v2/schema.json#/definitions/queryParameterSubSchema/properties/minLength",
+        "pattern": "http://swagger.io/v2/schema.json#/definitions/queryParameterSubSchema/properties/pattern",
+        "maxItems": "http://swagger.io/v2/schema.json#/definitions/queryParameterSubSchema/properties/maxItems",
+        "minItems": "http://swagger.io/v2/schema.json#/definitions/queryParameterSubSchema/properties/minItems",
+        "uniqueItems": "http://swagger.io/v2/schema.json#/definitions/queryParameterSubSchema/properties/uniqueItems",
+        "enum": "http://swagger.io/v2/schema.json#/definitions/queryParameterSubSchema/properties/enum",
+        "multipleOf": "http://swagger.io/v2/schema.json#/definitions/queryParameterSubSchema/properties/multipleOf"
+      },
+      "mapProperties": "http://swagger.io/v2/schema.json#/definitions/queryParameterSubSchema/additionalProperties",
+      "patternProperties": {
+        "^x-": "http://swagger.io/v2/schema.json#/definitions/queryParameterSubSchema/patternProperties/^x-"
+      }
+    },
+    "http://swagger.io/v2/schema.json#/definitions/formDataParameterSubSchema": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [
+        "map"
+      ],
+      "uniqueItems": false,
+      "required": [],
+      "objectProperties": {
+        "required": "http://swagger.io/v2/schema.json#/definitions/formDataParameterSubSchema/properties/required",
+        "in": "http://swagger.io/v2/schema.json#/definitions/formDataParameterSubSchema/properties/in",
+        "description": "http://swagger.io/v2/schema.json#/definitions/formDataParameterSubSchema/properties/description",
+        "name": "http://swagger.io/v2/schema.json#/definitions/formDataParameterSubSchema/properties/name",
+        "allowEmptyValue": "http://swagger.io/v2/schema.json#/definitions/formDataParameterSubSchema/properties/allowEmptyValue",
+        "type": "http://swagger.io/v2/schema.json#/definitions/formDataParameterSubSchema/properties/type",
+        "format": "http://swagger.io/v2/schema.json#/definitions/formDataParameterSubSchema/properties/format",
+        "items": "http://swagger.io/v2/schema.json#/definitions/formDataParameterSubSchema/properties/items",
+        "collectionFormat": "http://swagger.io/v2/schema.json#/definitions/formDataParameterSubSchema/properties/collectionFormat",
+        "default": "http://swagger.io/v2/schema.json#/definitions/formDataParameterSubSchema/properties/default",
+        "maximum": "http://swagger.io/v2/schema.json#/definitions/formDataParameterSubSchema/properties/maximum",
+        "exclusiveMaximum": "http://swagger.io/v2/schema.json#/definitions/formDataParameterSubSchema/properties/exclusiveMaximum",
+        "minimum": "http://swagger.io/v2/schema.json#/definitions/formDataParameterSubSchema/properties/minimum",
+        "exclusiveMinimum": "http://swagger.io/v2/schema.json#/definitions/formDataParameterSubSchema/properties/exclusiveMinimum",
+        "maxLength": "http://swagger.io/v2/schema.json#/definitions/formDataParameterSubSchema/properties/maxLength",
+        "minLength": "http://swagger.io/v2/schema.json#/definitions/formDataParameterSubSchema/properties/minLength",
+        "pattern": "http://swagger.io/v2/schema.json#/definitions/formDataParameterSubSchema/properties/pattern",
+        "maxItems": "http://swagger.io/v2/schema.json#/definitions/formDataParameterSubSchema/properties/maxItems",
+        "minItems": "http://swagger.io/v2/schema.json#/definitions/formDataParameterSubSchema/properties/minItems",
+        "uniqueItems": "http://swagger.io/v2/schema.json#/definitions/formDataParameterSubSchema/properties/uniqueItems",
+        "enum": "http://swagger.io/v2/schema.json#/definitions/formDataParameterSubSchema/properties/enum",
+        "multipleOf": "http://swagger.io/v2/schema.json#/definitions/formDataParameterSubSchema/properties/multipleOf"
+      },
+      "mapProperties": "http://swagger.io/v2/schema.json#/definitions/formDataParameterSubSchema/additionalProperties",
+      "patternProperties": {
+        "^x-": "http://swagger.io/v2/schema.json#/definitions/formDataParameterSubSchema/patternProperties/^x-"
+      }
+    },
+    "http://swagger.io/v2/schema.json#/definitions/pathParameterSubSchema": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [
+        "map"
+      ],
+      "uniqueItems": false,
+      "required": [
+        "required"
+      ],
+      "objectProperties": {
+        "required": "http://swagger.io/v2/schema.json#/definitions/pathParameterSubSchema/properties/required",
+        "in": "http://swagger.io/v2/schema.json#/definitions/pathParameterSubSchema/properties/in",
+        "description": "http://swagger.io/v2/schema.json#/definitions/pathParameterSubSchema/properties/description",
+        "name": "http://swagger.io/v2/schema.json#/definitions/pathParameterSubSchema/properties/name",
+        "type": "http://swagger.io/v2/schema.json#/definitions/pathParameterSubSchema/properties/type",
+        "format": "http://swagger.io/v2/schema.json#/definitions/pathParameterSubSchema/properties/format",
+        "items": "http://swagger.io/v2/schema.json#/definitions/pathParameterSubSchema/properties/items",
+        "collectionFormat": "http://swagger.io/v2/schema.json#/definitions/pathParameterSubSchema/properties/collectionFormat",
+        "default": "http://swagger.io/v2/schema.json#/definitions/pathParameterSubSchema/properties/default",
+        "maximum": "http://swagger.io/v2/schema.json#/definitions/pathParameterSubSchema/properties/maximum",
+        "exclusiveMaximum": "http://swagger.io/v2/schema.json#/definitions/pathParameterSubSchema/properties/exclusiveMaximum",
+        "minimum": "http://swagger.io/v2/schema.json#/definitions/pathParameterSubSchema/properties/minimum",
+        "exclusiveMinimum": "http://swagger.io/v2/schema.json#/definitions/pathParameterSubSchema/properties/exclusiveMinimum",
+        "maxLength": "http://swagger.io/v2/schema.json#/definitions/pathParameterSubSchema/properties/maxLength",
+        "minLength": "http://swagger.io/v2/schema.json#/definitions/pathParameterSubSchema/properties/minLength",
+        "pattern": "http://swagger.io/v2/schema.json#/definitions/pathParameterSubSchema/properties/pattern",
+        "maxItems": "http://swagger.io/v2/schema.json#/definitions/pathParameterSubSchema/properties/maxItems",
+        "minItems": "http://swagger.io/v2/schema.json#/definitions/pathParameterSubSchema/properties/minItems",
+        "uniqueItems": "http://swagger.io/v2/schema.json#/definitions/pathParameterSubSchema/properties/uniqueItems",
+        "enum": "http://swagger.io/v2/schema.json#/definitions/pathParameterSubSchema/properties/enum",
+        "multipleOf": "http://swagger.io/v2/schema.json#/definitions/pathParameterSubSchema/properties/multipleOf"
+      },
+      "mapProperties": "http://swagger.io/v2/schema.json#/definitions/pathParameterSubSchema/additionalProperties",
+      "patternProperties": {
+        "^x-": "http://swagger.io/v2/schema.json#/definitions/pathParameterSubSchema/patternProperties/^x-"
+      }
+    },
+    "http://swagger.io/v2/schema.json#/definitions/nonBodyParameter": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [
+        "map"
+      ],
+      "uniqueItems": false,
+      "required": [
+        "name",
+        "in",
+        "type"
+      ],
+      "oneOf": [
+        "http://swagger.io/v2/schema.json#/definitions/nonBodyParameter/oneOf/0",
+        "http://swagger.io/v2/schema.json#/definitions/nonBodyParameter/oneOf/1",
+        "http://swagger.io/v2/schema.json#/definitions/nonBodyParameter/oneOf/2",
+        "http://swagger.io/v2/schema.json#/definitions/nonBodyParameter/oneOf/3"
+      ]
+    },
+    "http://swagger.io/v2/schema.json#/definitions/parameter": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "oneOf": [
+        "http://swagger.io/v2/schema.json#/definitions/parameter/oneOf/0",
+        "http://swagger.io/v2/schema.json#/definitions/parameter/oneOf/1"
+      ]
+    },
+    "http://swagger.io/v2/schema.json#/definitions/schema": {
+      "deprecated": false,
+      "title": "",
+      "description": "A deterministic version of a JSON Schema object.",
+      "examples": [],
+      "types": [
+        "map"
+      ],
+      "uniqueItems": false,
+      "required": [],
+      "objectProperties": {
+        "$ref": "http://swagger.io/v2/schema.json#/definitions/schema/properties/$ref",
+        "format": "http://swagger.io/v2/schema.json#/definitions/schema/properties/format",
+        "title": "http://swagger.io/v2/schema.json#/definitions/schema/properties/title",
+        "description": "http://swagger.io/v2/schema.json#/definitions/schema/properties/description",
+        "default": "http://swagger.io/v2/schema.json#/definitions/schema/properties/default",
+        "multipleOf": "http://swagger.io/v2/schema.json#/definitions/schema/properties/multipleOf",
+        "maximum": "http://swagger.io/v2/schema.json#/definitions/schema/properties/maximum",
+        "exclusiveMaximum": "http://swagger.io/v2/schema.json#/definitions/schema/properties/exclusiveMaximum",
+        "minimum": "http://swagger.io/v2/schema.json#/definitions/schema/properties/minimum",
+        "exclusiveMinimum": "http://swagger.io/v2/schema.json#/definitions/schema/properties/exclusiveMinimum",
+        "maxLength": "http://swagger.io/v2/schema.json#/definitions/schema/properties/maxLength",
+        "minLength": "http://swagger.io/v2/schema.json#/definitions/schema/properties/minLength",
+        "pattern": "http://swagger.io/v2/schema.json#/definitions/schema/properties/pattern",
+        "maxItems": "http://swagger.io/v2/schema.json#/definitions/schema/properties/maxItems",
+        "minItems": "http://swagger.io/v2/schema.json#/definitions/schema/properties/minItems",
+        "uniqueItems": "http://swagger.io/v2/schema.json#/definitions/schema/properties/uniqueItems",
+        "maxProperties": "http://swagger.io/v2/schema.json#/definitions/schema/properties/maxProperties",
+        "minProperties": "http://swagger.io/v2/schema.json#/definitions/schema/properties/minProperties",
+        "required": "http://swagger.io/v2/schema.json#/definitions/schema/properties/required",
+        "enum": "http://swagger.io/v2/schema.json#/definitions/schema/properties/enum",
+        "additionalProperties": "http://swagger.io/v2/schema.json#/definitions/schema/properties/additionalProperties",
+        "type": "http://swagger.io/v2/schema.json#/definitions/schema/properties/type",
+        "items": "http://swagger.io/v2/schema.json#/definitions/schema/properties/items",
+        "allOf": "http://swagger.io/v2/schema.json#/definitions/schema/properties/allOf",
+        "properties": "http://swagger.io/v2/schema.json#/definitions/schema/properties/properties",
+        "discriminator": "http://swagger.io/v2/schema.json#/definitions/schema/properties/discriminator",
+        "readOnly": "http://swagger.io/v2/schema.json#/definitions/schema/properties/readOnly",
+        "xml": "http://swagger.io/v2/schema.json#/definitions/schema/properties/xml",
+        "externalDocs": "http://swagger.io/v2/schema.json#/definitions/schema/properties/externalDocs",
+        "example": "http://swagger.io/v2/schema.json#/definitions/schema/properties/example"
+      },
+      "mapProperties": "http://swagger.io/v2/schema.json#/definitions/schema/additionalProperties",
+      "patternProperties": {
+        "^x-": "http://swagger.io/v2/schema.json#/definitions/schema/patternProperties/^x-"
+      }
+    },
+    "http://swagger.io/v2/schema.json#/definitions/fileSchema": {
+      "deprecated": false,
+      "title": "",
+      "description": "A deterministic version of a JSON Schema object.",
+      "examples": [],
+      "types": [
+        "map"
+      ],
+      "uniqueItems": false,
+      "required": [
+        "type"
+      ],
+      "objectProperties": {
+        "format": "http://swagger.io/v2/schema.json#/definitions/fileSchema/properties/format",
+        "title": "http://swagger.io/v2/schema.json#/definitions/fileSchema/properties/title",
+        "description": "http://swagger.io/v2/schema.json#/definitions/fileSchema/properties/description",
+        "default": "http://swagger.io/v2/schema.json#/definitions/fileSchema/properties/default",
+        "required": "http://swagger.io/v2/schema.json#/definitions/fileSchema/properties/required",
+        "type": "http://swagger.io/v2/schema.json#/definitions/fileSchema/properties/type",
+        "readOnly": "http://swagger.io/v2/schema.json#/definitions/fileSchema/properties/readOnly",
+        "externalDocs": "http://swagger.io/v2/schema.json#/definitions/fileSchema/properties/externalDocs",
+        "example": "http://swagger.io/v2/schema.json#/definitions/fileSchema/properties/example"
+      },
+      "mapProperties": "http://swagger.io/v2/schema.json#/definitions/fileSchema/additionalProperties",
+      "patternProperties": {
+        "^x-": "http://swagger.io/v2/schema.json#/definitions/fileSchema/patternProperties/^x-"
+      }
+    },
+    "http://swagger.io/v2/schema.json#/definitions/primitivesItems": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [
+        "map"
+      ],
+      "uniqueItems": false,
+      "required": [],
+      "objectProperties": {
+        "type": "http://swagger.io/v2/schema.json#/definitions/primitivesItems/properties/type",
+        "format": "http://swagger.io/v2/schema.json#/definitions/primitivesItems/properties/format",
+        "items": "http://swagger.io/v2/schema.json#/definitions/primitivesItems/properties/items",
+        "collectionFormat": "http://swagger.io/v2/schema.json#/definitions/primitivesItems/properties/collectionFormat",
+        "default": "http://swagger.io/v2/schema.json#/definitions/primitivesItems/properties/default",
+        "maximum": "http://swagger.io/v2/schema.json#/definitions/primitivesItems/properties/maximum",
+        "exclusiveMaximum": "http://swagger.io/v2/schema.json#/definitions/primitivesItems/properties/exclusiveMaximum",
+        "minimum": "http://swagger.io/v2/schema.json#/definitions/primitivesItems/properties/minimum",
+        "exclusiveMinimum": "http://swagger.io/v2/schema.json#/definitions/primitivesItems/properties/exclusiveMinimum",
+        "maxLength": "http://swagger.io/v2/schema.json#/definitions/primitivesItems/properties/maxLength",
+        "minLength": "http://swagger.io/v2/schema.json#/definitions/primitivesItems/properties/minLength",
+        "pattern": "http://swagger.io/v2/schema.json#/definitions/primitivesItems/properties/pattern",
+        "maxItems": "http://swagger.io/v2/schema.json#/definitions/primitivesItems/properties/maxItems",
+        "minItems": "http://swagger.io/v2/schema.json#/definitions/primitivesItems/properties/minItems",
+        "uniqueItems": "http://swagger.io/v2/schema.json#/definitions/primitivesItems/properties/uniqueItems",
+        "enum": "http://swagger.io/v2/schema.json#/definitions/primitivesItems/properties/enum",
+        "multipleOf": "http://swagger.io/v2/schema.json#/definitions/primitivesItems/properties/multipleOf"
+      },
+      "mapProperties": "http://swagger.io/v2/schema.json#/definitions/primitivesItems/additionalProperties",
+      "patternProperties": {
+        "^x-": "http://swagger.io/v2/schema.json#/definitions/primitivesItems/patternProperties/^x-"
+      }
+    },
+    "http://swagger.io/v2/schema.json#/definitions/security": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [
+        "array"
+      ],
+      "uniqueItems": true,
+      "required": [],
+      "arrayItems": "http://swagger.io/v2/schema.json#/definitions/security/items"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/securityRequirement": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [
+        "map"
+      ],
+      "uniqueItems": false,
+      "required": [],
+      "mapProperties": "http://swagger.io/v2/schema.json#/definitions/securityRequirement/additionalProperties"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/xml": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [
+        "map"
+      ],
+      "uniqueItems": false,
+      "required": [],
+      "objectProperties": {
+        "name": "http://swagger.io/v2/schema.json#/definitions/xml/properties/name",
+        "namespace": "http://swagger.io/v2/schema.json#/definitions/xml/properties/namespace",
+        "prefix": "http://swagger.io/v2/schema.json#/definitions/xml/properties/prefix",
+        "attribute": "http://swagger.io/v2/schema.json#/definitions/xml/properties/attribute",
+        "wrapped": "http://swagger.io/v2/schema.json#/definitions/xml/properties/wrapped"
+      },
+      "mapProperties": "http://swagger.io/v2/schema.json#/definitions/xml/additionalProperties",
+      "patternProperties": {
+        "^x-": "http://swagger.io/v2/schema.json#/definitions/xml/patternProperties/^x-"
+      }
+    },
+    "http://swagger.io/v2/schema.json#/definitions/tag": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [
+        "map"
+      ],
+      "uniqueItems": false,
+      "required": [
+        "name"
+      ],
+      "objectProperties": {
+        "name": "http://swagger.io/v2/schema.json#/definitions/tag/properties/name",
+        "description": "http://swagger.io/v2/schema.json#/definitions/tag/properties/description",
+        "externalDocs": "http://swagger.io/v2/schema.json#/definitions/tag/properties/externalDocs"
+      },
+      "mapProperties": "http://swagger.io/v2/schema.json#/definitions/tag/additionalProperties",
+      "patternProperties": {
+        "^x-": "http://swagger.io/v2/schema.json#/definitions/tag/patternProperties/^x-"
+      }
+    },
+    "http://swagger.io/v2/schema.json#/definitions/securityDefinitions": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [
+        "map"
+      ],
+      "uniqueItems": false,
+      "required": [],
+      "mapProperties": "http://swagger.io/v2/schema.json#/definitions/securityDefinitions/additionalProperties"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/basicAuthenticationSecurity": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [
+        "map"
+      ],
+      "uniqueItems": false,
+      "required": [
+        "type"
+      ],
+      "objectProperties": {
+        "type": "http://swagger.io/v2/schema.json#/definitions/basicAuthenticationSecurity/properties/type",
+        "description": "http://swagger.io/v2/schema.json#/definitions/basicAuthenticationSecurity/properties/description"
+      },
+      "mapProperties": "http://swagger.io/v2/schema.json#/definitions/basicAuthenticationSecurity/additionalProperties",
+      "patternProperties": {
+        "^x-": "http://swagger.io/v2/schema.json#/definitions/basicAuthenticationSecurity/patternProperties/^x-"
+      }
+    },
+    "http://swagger.io/v2/schema.json#/definitions/apiKeySecurity": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [
+        "map"
+      ],
+      "uniqueItems": false,
+      "required": [
+        "type",
+        "name",
+        "in"
+      ],
+      "objectProperties": {
+        "type": "http://swagger.io/v2/schema.json#/definitions/apiKeySecurity/properties/type",
+        "name": "http://swagger.io/v2/schema.json#/definitions/apiKeySecurity/properties/name",
+        "in": "http://swagger.io/v2/schema.json#/definitions/apiKeySecurity/properties/in",
+        "description": "http://swagger.io/v2/schema.json#/definitions/apiKeySecurity/properties/description"
+      },
+      "mapProperties": "http://swagger.io/v2/schema.json#/definitions/apiKeySecurity/additionalProperties",
+      "patternProperties": {
+        "^x-": "http://swagger.io/v2/schema.json#/definitions/apiKeySecurity/patternProperties/^x-"
+      }
+    },
+    "http://swagger.io/v2/schema.json#/definitions/oauth2ImplicitSecurity": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [
+        "map"
+      ],
+      "uniqueItems": false,
+      "required": [
+        "type",
+        "flow",
+        "authorizationUrl"
+      ],
+      "objectProperties": {
+        "type": "http://swagger.io/v2/schema.json#/definitions/oauth2ImplicitSecurity/properties/type",
+        "flow": "http://swagger.io/v2/schema.json#/definitions/oauth2ImplicitSecurity/properties/flow",
+        "scopes": "http://swagger.io/v2/schema.json#/definitions/oauth2ImplicitSecurity/properties/scopes",
+        "authorizationUrl": "http://swagger.io/v2/schema.json#/definitions/oauth2ImplicitSecurity/properties/authorizationUrl",
+        "description": "http://swagger.io/v2/schema.json#/definitions/oauth2ImplicitSecurity/properties/description"
+      },
+      "mapProperties": "http://swagger.io/v2/schema.json#/definitions/oauth2ImplicitSecurity/additionalProperties",
+      "patternProperties": {
+        "^x-": "http://swagger.io/v2/schema.json#/definitions/oauth2ImplicitSecurity/patternProperties/^x-"
+      }
+    },
+    "http://swagger.io/v2/schema.json#/definitions/oauth2PasswordSecurity": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [
+        "map"
+      ],
+      "uniqueItems": false,
+      "required": [
+        "type",
+        "flow",
+        "tokenUrl"
+      ],
+      "objectProperties": {
+        "type": "http://swagger.io/v2/schema.json#/definitions/oauth2PasswordSecurity/properties/type",
+        "flow": "http://swagger.io/v2/schema.json#/definitions/oauth2PasswordSecurity/properties/flow",
+        "scopes": "http://swagger.io/v2/schema.json#/definitions/oauth2PasswordSecurity/properties/scopes",
+        "tokenUrl": "http://swagger.io/v2/schema.json#/definitions/oauth2PasswordSecurity/properties/tokenUrl",
+        "description": "http://swagger.io/v2/schema.json#/definitions/oauth2PasswordSecurity/properties/description"
+      },
+      "mapProperties": "http://swagger.io/v2/schema.json#/definitions/oauth2PasswordSecurity/additionalProperties",
+      "patternProperties": {
+        "^x-": "http://swagger.io/v2/schema.json#/definitions/oauth2PasswordSecurity/patternProperties/^x-"
+      }
+    },
+    "http://swagger.io/v2/schema.json#/definitions/oauth2ApplicationSecurity": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [
+        "map"
+      ],
+      "uniqueItems": false,
+      "required": [
+        "type",
+        "flow",
+        "tokenUrl"
+      ],
+      "objectProperties": {
+        "type": "http://swagger.io/v2/schema.json#/definitions/oauth2ApplicationSecurity/properties/type",
+        "flow": "http://swagger.io/v2/schema.json#/definitions/oauth2ApplicationSecurity/properties/flow",
+        "scopes": "http://swagger.io/v2/schema.json#/definitions/oauth2ApplicationSecurity/properties/scopes",
+        "tokenUrl": "http://swagger.io/v2/schema.json#/definitions/oauth2ApplicationSecurity/properties/tokenUrl",
+        "description": "http://swagger.io/v2/schema.json#/definitions/oauth2ApplicationSecurity/properties/description"
+      },
+      "mapProperties": "http://swagger.io/v2/schema.json#/definitions/oauth2ApplicationSecurity/additionalProperties",
+      "patternProperties": {
+        "^x-": "http://swagger.io/v2/schema.json#/definitions/oauth2ApplicationSecurity/patternProperties/^x-"
+      }
+    },
+    "http://swagger.io/v2/schema.json#/definitions/oauth2AccessCodeSecurity": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [
+        "map"
+      ],
+      "uniqueItems": false,
+      "required": [
+        "type",
+        "flow",
+        "authorizationUrl",
+        "tokenUrl"
+      ],
+      "objectProperties": {
+        "type": "http://swagger.io/v2/schema.json#/definitions/oauth2AccessCodeSecurity/properties/type",
+        "flow": "http://swagger.io/v2/schema.json#/definitions/oauth2AccessCodeSecurity/properties/flow",
+        "scopes": "http://swagger.io/v2/schema.json#/definitions/oauth2AccessCodeSecurity/properties/scopes",
+        "authorizationUrl": "http://swagger.io/v2/schema.json#/definitions/oauth2AccessCodeSecurity/properties/authorizationUrl",
+        "tokenUrl": "http://swagger.io/v2/schema.json#/definitions/oauth2AccessCodeSecurity/properties/tokenUrl",
+        "description": "http://swagger.io/v2/schema.json#/definitions/oauth2AccessCodeSecurity/properties/description"
+      },
+      "mapProperties": "http://swagger.io/v2/schema.json#/definitions/oauth2AccessCodeSecurity/additionalProperties",
+      "patternProperties": {
+        "^x-": "http://swagger.io/v2/schema.json#/definitions/oauth2AccessCodeSecurity/patternProperties/^x-"
+      }
+    },
+    "http://swagger.io/v2/schema.json#/definitions/oauth2Scopes": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [
+        "map"
+      ],
+      "uniqueItems": false,
+      "required": [],
+      "mapProperties": "http://swagger.io/v2/schema.json#/definitions/oauth2Scopes/additionalProperties"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/mediaTypeList": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [
+        "array"
+      ],
+      "uniqueItems": true,
+      "required": [],
+      "arrayItems": "http://swagger.io/v2/schema.json#/definitions/mediaTypeList/items"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/parametersList": {
+      "deprecated": false,
+      "title": "",
+      "description": "The parameters needed to send a valid API call.",
+      "examples": [],
+      "types": [
+        "array"
+      ],
+      "uniqueItems": true,
+      "required": [],
+      "arrayItems": "http://swagger.io/v2/schema.json#/definitions/parametersList/items"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/schemesList": {
+      "deprecated": false,
+      "title": "",
+      "description": "The transfer protocol of the API.",
+      "examples": [],
+      "types": [
+        "array"
+      ],
+      "uniqueItems": true,
+      "required": [],
+      "arrayItems": "http://swagger.io/v2/schema.json#/definitions/schemesList/items"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/collectionFormat": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [
+        "string"
+      ],
+      "options": [
+        "csv",
+        "ssv",
+        "tsv",
+        "pipes"
+      ],
+      "uniqueItems": false,
+      "required": []
+    },
+    "http://swagger.io/v2/schema.json#/definitions/collectionFormatWithMulti": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [
+        "string"
+      ],
+      "options": [
+        "csv",
+        "ssv",
+        "tsv",
+        "pipes",
+        "multi"
+      ],
+      "uniqueItems": false,
+      "required": []
+    },
+    "http://swagger.io/v2/schema.json#/definitions/title": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://json-schema.org/draft-04/schema#/properties/title"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/description": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://json-schema.org/draft-04/schema#/properties/description"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/default": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://json-schema.org/draft-04/schema#/properties/default"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/multipleOf": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://json-schema.org/draft-04/schema#/properties/multipleOf"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/maximum": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://json-schema.org/draft-04/schema#/properties/maximum"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/exclusiveMaximum": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://json-schema.org/draft-04/schema#/properties/exclusiveMaximum"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/minimum": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://json-schema.org/draft-04/schema#/properties/minimum"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/exclusiveMinimum": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://json-schema.org/draft-04/schema#/properties/exclusiveMinimum"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/maxLength": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://json-schema.org/draft-04/schema#/definitions/positiveInteger"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/minLength": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://json-schema.org/draft-04/schema#/definitions/positiveIntegerDefault0"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/pattern": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://json-schema.org/draft-04/schema#/properties/pattern"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/maxItems": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://json-schema.org/draft-04/schema#/definitions/positiveInteger"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/minItems": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://json-schema.org/draft-04/schema#/definitions/positiveIntegerDefault0"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/uniqueItems": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://json-schema.org/draft-04/schema#/properties/uniqueItems"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/enum": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://json-schema.org/draft-04/schema#/properties/enum"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/jsonReference": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [
+        "map"
+      ],
+      "uniqueItems": false,
+      "required": [
+        "$ref"
+      ],
+      "objectProperties": {
+        "$ref": "http://swagger.io/v2/schema.json#/definitions/jsonReference/properties/$ref"
+      },
+      "mapProperties": "http://swagger.io/v2/schema.json#/definitions/jsonReference/additionalProperties"
+    },
+    "http://swagger.io/v2/schema.json#/properties/swagger": {
+      "deprecated": false,
+      "title": "",
+      "description": "The Swagger version of this document.",
+      "examples": [],
+      "types": [
+        "string"
+      ],
+      "options": [
+        "2.0"
+      ],
+      "uniqueItems": false,
+      "required": []
+    },
+    "http://swagger.io/v2/schema.json#/properties/info": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/info"
+    },
+    "http://swagger.io/v2/schema.json#/properties/host": {
+      "deprecated": false,
+      "title": "",
+      "description": "The host (name or ip) of the API. Example: 'swagger.io'",
+      "examples": [],
+      "types": [
+        "string"
+      ],
+      "valuePattern": "^[^{}/ :\\\\]+(?::\\d+)?$",
+      "uniqueItems": false,
+      "required": []
+    },
+    "http://swagger.io/v2/schema.json#/properties/basePath": {
+      "deprecated": false,
+      "title": "",
+      "description": "The base path to the API. Example: '/api'.",
+      "examples": [],
+      "types": [
+        "string"
+      ],
+      "valuePattern": "^/",
+      "uniqueItems": false,
+      "required": []
+    },
+    "http://swagger.io/v2/schema.json#/properties/schemes": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/schemesList"
+    },
+    "http://swagger.io/v2/schema.json#/properties/consumes": {
+      "deprecated": false,
+      "title": "",
+      "description": "A list of MIME types accepted by the API.",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "allOf": [
+        "http://swagger.io/v2/schema.json#/properties/consumes/allOf/0"
+      ]
+    },
+    "http://swagger.io/v2/schema.json#/properties/produces": {
+      "deprecated": false,
+      "title": "",
+      "description": "A list of MIME types the API can produce.",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "allOf": [
+        "http://swagger.io/v2/schema.json#/properties/produces/allOf/0"
+      ]
+    },
+    "http://swagger.io/v2/schema.json#/properties/paths": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/paths"
+    },
+    "http://swagger.io/v2/schema.json#/properties/definitions": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/definitions"
+    },
+    "http://swagger.io/v2/schema.json#/properties/parameters": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/parameterDefinitions"
+    },
+    "http://swagger.io/v2/schema.json#/properties/responses": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/responseDefinitions"
+    },
+    "http://swagger.io/v2/schema.json#/properties/security": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/security"
+    },
+    "http://swagger.io/v2/schema.json#/properties/securityDefinitions": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/securityDefinitions"
+    },
+    "http://swagger.io/v2/schema.json#/properties/tags": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [
+        "array"
+      ],
+      "uniqueItems": true,
+      "required": [],
+      "arrayItems": "http://swagger.io/v2/schema.json#/properties/tags/items"
+    },
+    "http://swagger.io/v2/schema.json#/properties/externalDocs": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/externalDocs"
+    },
+    "http://swagger.io/v2/schema.json#/additionalProperties": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [
+        "never"
+      ],
+      "uniqueItems": false,
+      "required": []
+    },
+    "http://swagger.io/v2/schema.json#/patternProperties/^x-": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/vendorExtension"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/info/properties/title": {
+      "deprecated": false,
+      "title": "",
+      "description": "A unique and precise title of the API.",
+      "examples": [],
+      "types": [
+        "string"
+      ],
+      "uniqueItems": false,
+      "required": []
+    },
+    "http://swagger.io/v2/schema.json#/definitions/info/properties/version": {
+      "deprecated": false,
+      "title": "",
+      "description": "A semantic version number of the API.",
+      "examples": [],
+      "types": [
+        "string"
+      ],
+      "uniqueItems": false,
+      "required": []
+    },
+    "http://swagger.io/v2/schema.json#/definitions/info/properties/description": {
+      "deprecated": false,
+      "title": "",
+      "description": "A longer description of the API. Should be different from the title.  GitHub Flavored Markdown is allowed.",
+      "examples": [],
+      "types": [
+        "string"
+      ],
+      "uniqueItems": false,
+      "required": []
+    },
+    "http://swagger.io/v2/schema.json#/definitions/info/properties/termsOfService": {
+      "deprecated": false,
+      "title": "",
+      "description": "The terms of service for the API.",
+      "examples": [],
+      "types": [
+        "string"
+      ],
+      "uniqueItems": false,
+      "required": []
+    },
+    "http://swagger.io/v2/schema.json#/definitions/info/properties/contact": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/contact"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/info/properties/license": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/license"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/info/additionalProperties": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [
+        "never"
+      ],
+      "uniqueItems": false,
+      "required": []
+    },
+    "http://swagger.io/v2/schema.json#/definitions/info/patternProperties/^x-": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/vendorExtension"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/contact/properties/name": {
+      "deprecated": false,
+      "title": "",
+      "description": "The identifying name of the contact person/organization.",
+      "examples": [],
+      "types": [
+        "string"
+      ],
+      "uniqueItems": false,
+      "required": []
+    },
+    "http://swagger.io/v2/schema.json#/definitions/contact/properties/url": {
+      "deprecated": false,
+      "title": "",
+      "description": "The URL pointing to the contact information.",
+      "examples": [],
+      "types": [
+        "string"
+      ],
+      "valueFormat": "uri",
+      "uniqueItems": false,
+      "required": []
+    },
+    "http://swagger.io/v2/schema.json#/definitions/contact/properties/email": {
+      "deprecated": false,
+      "title": "",
+      "description": "The email address of the contact person/organization.",
+      "examples": [],
+      "types": [
+        "string"
+      ],
+      "valueFormat": "email",
+      "uniqueItems": false,
+      "required": []
+    },
+    "http://swagger.io/v2/schema.json#/definitions/contact/additionalProperties": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [
+        "never"
+      ],
+      "uniqueItems": false,
+      "required": []
+    },
+    "http://swagger.io/v2/schema.json#/definitions/contact/patternProperties/^x-": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/vendorExtension"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/license/properties/name": {
+      "deprecated": false,
+      "title": "",
+      "description": "The name of the license type. It's encouraged to use an OSI compatible license.",
+      "examples": [],
+      "types": [
+        "string"
+      ],
+      "uniqueItems": false,
+      "required": []
+    },
+    "http://swagger.io/v2/schema.json#/definitions/license/properties/url": {
+      "deprecated": false,
+      "title": "",
+      "description": "The URL pointing to the license.",
+      "examples": [],
+      "types": [
+        "string"
+      ],
+      "valueFormat": "uri",
+      "uniqueItems": false,
+      "required": []
+    },
+    "http://swagger.io/v2/schema.json#/definitions/license/additionalProperties": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [
+        "never"
+      ],
+      "uniqueItems": false,
+      "required": []
+    },
+    "http://swagger.io/v2/schema.json#/definitions/license/patternProperties/^x-": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/vendorExtension"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/paths/additionalProperties": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [
+        "never"
+      ],
+      "uniqueItems": false,
+      "required": []
+    },
+    "http://swagger.io/v2/schema.json#/definitions/paths/patternProperties/^x-": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/vendorExtension"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/paths/patternProperties/^/": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/pathItem"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/definitions/additionalProperties": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/schema"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/parameterDefinitions/additionalProperties": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/parameter"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/responseDefinitions/additionalProperties": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/response"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/externalDocs/properties/description": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [
+        "string"
+      ],
+      "uniqueItems": false,
+      "required": []
+    },
+    "http://swagger.io/v2/schema.json#/definitions/externalDocs/properties/url": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [
+        "string"
+      ],
+      "valueFormat": "uri",
+      "uniqueItems": false,
+      "required": []
+    },
+    "http://swagger.io/v2/schema.json#/definitions/externalDocs/additionalProperties": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [
+        "never"
+      ],
+      "uniqueItems": false,
+      "required": []
+    },
+    "http://swagger.io/v2/schema.json#/definitions/externalDocs/patternProperties/^x-": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/vendorExtension"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/examples/additionalProperties": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [
+        "any"
+      ],
+      "uniqueItems": false,
+      "required": []
+    },
+    "http://swagger.io/v2/schema.json#/definitions/operation/properties/tags": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [
+        "array"
+      ],
+      "uniqueItems": true,
+      "required": [],
+      "arrayItems": "http://swagger.io/v2/schema.json#/definitions/operation/properties/tags/items"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/operation/properties/summary": {
+      "deprecated": false,
+      "title": "",
+      "description": "A brief summary of the operation.",
+      "examples": [],
+      "types": [
+        "string"
+      ],
+      "uniqueItems": false,
+      "required": []
+    },
+    "http://swagger.io/v2/schema.json#/definitions/operation/properties/description": {
+      "deprecated": false,
+      "title": "",
+      "description": "A longer description of the operation, GitHub Flavored Markdown is allowed.",
+      "examples": [],
+      "types": [
+        "string"
+      ],
+      "uniqueItems": false,
+      "required": []
+    },
+    "http://swagger.io/v2/schema.json#/definitions/operation/properties/externalDocs": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/externalDocs"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/operation/properties/operationId": {
+      "deprecated": false,
+      "title": "",
+      "description": "A unique identifier of the operation.",
+      "examples": [],
+      "types": [
+        "string"
+      ],
+      "uniqueItems": false,
+      "required": []
+    },
+    "http://swagger.io/v2/schema.json#/definitions/operation/properties/produces": {
+      "deprecated": false,
+      "title": "",
+      "description": "A list of MIME types the API can produce.",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "allOf": [
+        "http://swagger.io/v2/schema.json#/definitions/operation/properties/produces/allOf/0"
+      ]
+    },
+    "http://swagger.io/v2/schema.json#/definitions/operation/properties/consumes": {
+      "deprecated": false,
+      "title": "",
+      "description": "A list of MIME types the API can consume.",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "allOf": [
+        "http://swagger.io/v2/schema.json#/definitions/operation/properties/consumes/allOf/0"
+      ]
+    },
+    "http://swagger.io/v2/schema.json#/definitions/operation/properties/parameters": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/parametersList"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/operation/properties/responses": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/responses"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/operation/properties/schemes": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/schemesList"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/operation/properties/deprecated": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [
+        "boolean"
+      ],
+      "uniqueItems": false,
+      "required": []
+    },
+    "http://swagger.io/v2/schema.json#/definitions/operation/properties/security": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/security"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/operation/additionalProperties": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [
+        "never"
+      ],
+      "uniqueItems": false,
+      "required": []
+    },
+    "http://swagger.io/v2/schema.json#/definitions/operation/patternProperties/^x-": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/vendorExtension"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/pathItem/properties/$ref": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [
+        "string"
+      ],
+      "uniqueItems": false,
+      "required": []
+    },
+    "http://swagger.io/v2/schema.json#/definitions/pathItem/properties/get": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/operation"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/pathItem/properties/put": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/operation"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/pathItem/properties/post": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/operation"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/pathItem/properties/delete": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/operation"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/pathItem/properties/options": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/operation"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/pathItem/properties/head": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/operation"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/pathItem/properties/patch": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/operation"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/pathItem/properties/parameters": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/parametersList"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/pathItem/additionalProperties": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [
+        "never"
+      ],
+      "uniqueItems": false,
+      "required": []
+    },
+    "http://swagger.io/v2/schema.json#/definitions/pathItem/patternProperties/^x-": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/vendorExtension"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/responses/additionalProperties": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [
+        "never"
+      ],
+      "uniqueItems": false,
+      "required": []
+    },
+    "http://swagger.io/v2/schema.json#/definitions/responses/patternProperties/^([0-9]{3})$|^(default)$": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/responseValue"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/responses/patternProperties/^x-": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/vendorExtension"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/responses/not": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [
+        "map"
+      ],
+      "uniqueItems": false,
+      "required": [],
+      "mapProperties": "http://swagger.io/v2/schema.json#/definitions/responses/not/additionalProperties",
+      "patternProperties": {
+        "^x-": "http://swagger.io/v2/schema.json#/definitions/responses/not/patternProperties/^x-"
+      }
+    },
+    "http://swagger.io/v2/schema.json#/definitions/responseValue/oneOf/0": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/response"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/responseValue/oneOf/1": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/jsonReference"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/response/properties/description": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [
+        "string"
+      ],
+      "uniqueItems": false,
+      "required": []
+    },
+    "http://swagger.io/v2/schema.json#/definitions/response/properties/schema": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "oneOf": [
+        "http://swagger.io/v2/schema.json#/definitions/response/properties/schema/oneOf/0",
+        "http://swagger.io/v2/schema.json#/definitions/response/properties/schema/oneOf/1"
+      ]
+    },
+    "http://swagger.io/v2/schema.json#/definitions/response/properties/headers": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/headers"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/response/properties/examples": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/examples"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/response/additionalProperties": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [
+        "never"
+      ],
+      "uniqueItems": false,
+      "required": []
+    },
+    "http://swagger.io/v2/schema.json#/definitions/response/patternProperties/^x-": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/vendorExtension"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/headers/additionalProperties": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/header"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/header/properties/type": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [
+        "string"
+      ],
+      "options": [
+        "string",
+        "number",
+        "integer",
+        "boolean",
+        "array"
+      ],
+      "uniqueItems": false,
+      "required": []
+    },
+    "http://swagger.io/v2/schema.json#/definitions/header/properties/format": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [
+        "string"
+      ],
+      "uniqueItems": false,
+      "required": []
+    },
+    "http://swagger.io/v2/schema.json#/definitions/header/properties/items": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/primitivesItems"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/header/properties/collectionFormat": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/collectionFormat"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/header/properties/default": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/default"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/header/properties/maximum": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/maximum"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/header/properties/exclusiveMaximum": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/exclusiveMaximum"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/header/properties/minimum": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/minimum"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/header/properties/exclusiveMinimum": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/exclusiveMinimum"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/header/properties/maxLength": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/maxLength"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/header/properties/minLength": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/minLength"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/header/properties/pattern": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/pattern"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/header/properties/maxItems": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/maxItems"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/header/properties/minItems": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/minItems"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/header/properties/uniqueItems": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/uniqueItems"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/header/properties/enum": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/enum"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/header/properties/multipleOf": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/multipleOf"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/header/properties/description": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [
+        "string"
+      ],
+      "uniqueItems": false,
+      "required": []
+    },
+    "http://swagger.io/v2/schema.json#/definitions/header/additionalProperties": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [
+        "never"
+      ],
+      "uniqueItems": false,
+      "required": []
+    },
+    "http://swagger.io/v2/schema.json#/definitions/header/patternProperties/^x-": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/vendorExtension"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/vendorExtension/additionalProperties": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [
+        "any"
+      ],
+      "uniqueItems": false,
+      "required": []
+    },
+    "http://swagger.io/v2/schema.json#/definitions/vendorExtension/additionalItems": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [
+        "any"
+      ],
+      "uniqueItems": false,
+      "required": []
+    },
+    "http://swagger.io/v2/schema.json#/definitions/bodyParameter/properties/description": {
+      "deprecated": false,
+      "title": "",
+      "description": "A brief description of the parameter. This could contain examples of use.  GitHub Flavored Markdown is allowed.",
+      "examples": [],
+      "types": [
+        "string"
+      ],
+      "uniqueItems": false,
+      "required": []
+    },
+    "http://swagger.io/v2/schema.json#/definitions/bodyParameter/properties/name": {
+      "deprecated": false,
+      "title": "",
+      "description": "The name of the parameter.",
+      "examples": [],
+      "types": [
+        "string"
+      ],
+      "uniqueItems": false,
+      "required": []
+    },
+    "http://swagger.io/v2/schema.json#/definitions/bodyParameter/properties/in": {
+      "deprecated": false,
+      "title": "",
+      "description": "Determines the location of the parameter.",
+      "examples": [],
+      "types": [
+        "string"
+      ],
+      "options": [
+        "body"
+      ],
+      "uniqueItems": false,
+      "required": []
+    },
+    "http://swagger.io/v2/schema.json#/definitions/bodyParameter/properties/required": {
+      "deprecated": false,
+      "title": "",
+      "description": "Determines whether or not this parameter is required or optional.",
+      "examples": [],
+      "types": [
+        "boolean"
+      ],
+      "uniqueItems": false,
+      "required": []
+    },
+    "http://swagger.io/v2/schema.json#/definitions/bodyParameter/properties/schema": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/schema"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/bodyParameter/additionalProperties": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [
+        "never"
+      ],
+      "uniqueItems": false,
+      "required": []
+    },
+    "http://swagger.io/v2/schema.json#/definitions/bodyParameter/patternProperties/^x-": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/vendorExtension"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/headerParameterSubSchema/properties/required": {
+      "deprecated": false,
+      "title": "",
+      "description": "Determines whether or not this parameter is required or optional.",
+      "examples": [],
+      "types": [
+        "boolean"
+      ],
+      "uniqueItems": false,
+      "required": []
+    },
+    "http://swagger.io/v2/schema.json#/definitions/headerParameterSubSchema/properties/in": {
+      "deprecated": false,
+      "title": "",
+      "description": "Determines the location of the parameter.",
+      "examples": [],
+      "types": [
+        "string"
+      ],
+      "options": [
+        "header"
+      ],
+      "uniqueItems": false,
+      "required": []
+    },
+    "http://swagger.io/v2/schema.json#/definitions/headerParameterSubSchema/properties/description": {
+      "deprecated": false,
+      "title": "",
+      "description": "A brief description of the parameter. This could contain examples of use.  GitHub Flavored Markdown is allowed.",
+      "examples": [],
+      "types": [
+        "string"
+      ],
+      "uniqueItems": false,
+      "required": []
+    },
+    "http://swagger.io/v2/schema.json#/definitions/headerParameterSubSchema/properties/name": {
+      "deprecated": false,
+      "title": "",
+      "description": "The name of the parameter.",
+      "examples": [],
+      "types": [
+        "string"
+      ],
+      "uniqueItems": false,
+      "required": []
+    },
+    "http://swagger.io/v2/schema.json#/definitions/headerParameterSubSchema/properties/type": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [
+        "string"
+      ],
+      "options": [
+        "string",
+        "number",
+        "boolean",
+        "integer",
+        "array"
+      ],
+      "uniqueItems": false,
+      "required": []
+    },
+    "http://swagger.io/v2/schema.json#/definitions/headerParameterSubSchema/properties/format": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [
+        "string"
+      ],
+      "uniqueItems": false,
+      "required": []
+    },
+    "http://swagger.io/v2/schema.json#/definitions/headerParameterSubSchema/properties/items": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/primitivesItems"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/headerParameterSubSchema/properties/collectionFormat": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/collectionFormat"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/headerParameterSubSchema/properties/default": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/default"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/headerParameterSubSchema/properties/maximum": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/maximum"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/headerParameterSubSchema/properties/exclusiveMaximum": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/exclusiveMaximum"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/headerParameterSubSchema/properties/minimum": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/minimum"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/headerParameterSubSchema/properties/exclusiveMinimum": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/exclusiveMinimum"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/headerParameterSubSchema/properties/maxLength": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/maxLength"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/headerParameterSubSchema/properties/minLength": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/minLength"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/headerParameterSubSchema/properties/pattern": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/pattern"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/headerParameterSubSchema/properties/maxItems": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/maxItems"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/headerParameterSubSchema/properties/minItems": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/minItems"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/headerParameterSubSchema/properties/uniqueItems": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/uniqueItems"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/headerParameterSubSchema/properties/enum": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/enum"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/headerParameterSubSchema/properties/multipleOf": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/multipleOf"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/headerParameterSubSchema/additionalProperties": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [
+        "never"
+      ],
+      "uniqueItems": false,
+      "required": []
+    },
+    "http://swagger.io/v2/schema.json#/definitions/headerParameterSubSchema/patternProperties/^x-": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/vendorExtension"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/queryParameterSubSchema/properties/required": {
+      "deprecated": false,
+      "title": "",
+      "description": "Determines whether or not this parameter is required or optional.",
+      "examples": [],
+      "types": [
+        "boolean"
+      ],
+      "uniqueItems": false,
+      "required": []
+    },
+    "http://swagger.io/v2/schema.json#/definitions/queryParameterSubSchema/properties/in": {
+      "deprecated": false,
+      "title": "",
+      "description": "Determines the location of the parameter.",
+      "examples": [],
+      "types": [
+        "string"
+      ],
+      "options": [
+        "query"
+      ],
+      "uniqueItems": false,
+      "required": []
+    },
+    "http://swagger.io/v2/schema.json#/definitions/queryParameterSubSchema/properties/description": {
+      "deprecated": false,
+      "title": "",
+      "description": "A brief description of the parameter. This could contain examples of use.  GitHub Flavored Markdown is allowed.",
+      "examples": [],
+      "types": [
+        "string"
+      ],
+      "uniqueItems": false,
+      "required": []
+    },
+    "http://swagger.io/v2/schema.json#/definitions/queryParameterSubSchema/properties/name": {
+      "deprecated": false,
+      "title": "",
+      "description": "The name of the parameter.",
+      "examples": [],
+      "types": [
+        "string"
+      ],
+      "uniqueItems": false,
+      "required": []
+    },
+    "http://swagger.io/v2/schema.json#/definitions/queryParameterSubSchema/properties/allowEmptyValue": {
+      "deprecated": false,
+      "title": "",
+      "description": "allows sending a parameter by name only or with an empty value.",
+      "examples": [],
+      "types": [
+        "boolean"
+      ],
+      "uniqueItems": false,
+      "required": []
+    },
+    "http://swagger.io/v2/schema.json#/definitions/queryParameterSubSchema/properties/type": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [
+        "string"
+      ],
+      "options": [
+        "string",
+        "number",
+        "boolean",
+        "integer",
+        "array"
+      ],
+      "uniqueItems": false,
+      "required": []
+    },
+    "http://swagger.io/v2/schema.json#/definitions/queryParameterSubSchema/properties/format": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [
+        "string"
+      ],
+      "uniqueItems": false,
+      "required": []
+    },
+    "http://swagger.io/v2/schema.json#/definitions/queryParameterSubSchema/properties/items": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/primitivesItems"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/queryParameterSubSchema/properties/collectionFormat": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/collectionFormatWithMulti"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/queryParameterSubSchema/properties/default": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/default"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/queryParameterSubSchema/properties/maximum": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/maximum"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/queryParameterSubSchema/properties/exclusiveMaximum": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/exclusiveMaximum"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/queryParameterSubSchema/properties/minimum": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/minimum"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/queryParameterSubSchema/properties/exclusiveMinimum": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/exclusiveMinimum"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/queryParameterSubSchema/properties/maxLength": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/maxLength"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/queryParameterSubSchema/properties/minLength": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/minLength"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/queryParameterSubSchema/properties/pattern": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/pattern"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/queryParameterSubSchema/properties/maxItems": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/maxItems"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/queryParameterSubSchema/properties/minItems": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/minItems"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/queryParameterSubSchema/properties/uniqueItems": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/uniqueItems"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/queryParameterSubSchema/properties/enum": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/enum"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/queryParameterSubSchema/properties/multipleOf": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/multipleOf"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/queryParameterSubSchema/additionalProperties": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [
+        "never"
+      ],
+      "uniqueItems": false,
+      "required": []
+    },
+    "http://swagger.io/v2/schema.json#/definitions/queryParameterSubSchema/patternProperties/^x-": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/vendorExtension"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/formDataParameterSubSchema/properties/required": {
+      "deprecated": false,
+      "title": "",
+      "description": "Determines whether or not this parameter is required or optional.",
+      "examples": [],
+      "types": [
+        "boolean"
+      ],
+      "uniqueItems": false,
+      "required": []
+    },
+    "http://swagger.io/v2/schema.json#/definitions/formDataParameterSubSchema/properties/in": {
+      "deprecated": false,
+      "title": "",
+      "description": "Determines the location of the parameter.",
+      "examples": [],
+      "types": [
+        "string"
+      ],
+      "options": [
+        "formData"
+      ],
+      "uniqueItems": false,
+      "required": []
+    },
+    "http://swagger.io/v2/schema.json#/definitions/formDataParameterSubSchema/properties/description": {
+      "deprecated": false,
+      "title": "",
+      "description": "A brief description of the parameter. This could contain examples of use.  GitHub Flavored Markdown is allowed.",
+      "examples": [],
+      "types": [
+        "string"
+      ],
+      "uniqueItems": false,
+      "required": []
+    },
+    "http://swagger.io/v2/schema.json#/definitions/formDataParameterSubSchema/properties/name": {
+      "deprecated": false,
+      "title": "",
+      "description": "The name of the parameter.",
+      "examples": [],
+      "types": [
+        "string"
+      ],
+      "uniqueItems": false,
+      "required": []
+    },
+    "http://swagger.io/v2/schema.json#/definitions/formDataParameterSubSchema/properties/allowEmptyValue": {
+      "deprecated": false,
+      "title": "",
+      "description": "allows sending a parameter by name only or with an empty value.",
+      "examples": [],
+      "types": [
+        "boolean"
+      ],
+      "uniqueItems": false,
+      "required": []
+    },
+    "http://swagger.io/v2/schema.json#/definitions/formDataParameterSubSchema/properties/type": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [
+        "string"
+      ],
+      "options": [
+        "string",
+        "number",
+        "boolean",
+        "integer",
+        "array",
+        "file"
+      ],
+      "uniqueItems": false,
+      "required": []
+    },
+    "http://swagger.io/v2/schema.json#/definitions/formDataParameterSubSchema/properties/format": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [
+        "string"
+      ],
+      "uniqueItems": false,
+      "required": []
+    },
+    "http://swagger.io/v2/schema.json#/definitions/formDataParameterSubSchema/properties/items": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/primitivesItems"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/formDataParameterSubSchema/properties/collectionFormat": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/collectionFormatWithMulti"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/formDataParameterSubSchema/properties/default": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/default"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/formDataParameterSubSchema/properties/maximum": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/maximum"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/formDataParameterSubSchema/properties/exclusiveMaximum": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/exclusiveMaximum"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/formDataParameterSubSchema/properties/minimum": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/minimum"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/formDataParameterSubSchema/properties/exclusiveMinimum": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/exclusiveMinimum"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/formDataParameterSubSchema/properties/maxLength": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/maxLength"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/formDataParameterSubSchema/properties/minLength": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/minLength"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/formDataParameterSubSchema/properties/pattern": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/pattern"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/formDataParameterSubSchema/properties/maxItems": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/maxItems"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/formDataParameterSubSchema/properties/minItems": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/minItems"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/formDataParameterSubSchema/properties/uniqueItems": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/uniqueItems"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/formDataParameterSubSchema/properties/enum": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/enum"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/formDataParameterSubSchema/properties/multipleOf": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/multipleOf"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/formDataParameterSubSchema/additionalProperties": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [
+        "never"
+      ],
+      "uniqueItems": false,
+      "required": []
+    },
+    "http://swagger.io/v2/schema.json#/definitions/formDataParameterSubSchema/patternProperties/^x-": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/vendorExtension"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/pathParameterSubSchema/properties/required": {
+      "deprecated": false,
+      "title": "",
+      "description": "Determines whether or not this parameter is required or optional.",
+      "examples": [],
+      "types": [
+        "boolean"
+      ],
+      "options": [
+        true
+      ],
+      "uniqueItems": false,
+      "required": []
+    },
+    "http://swagger.io/v2/schema.json#/definitions/pathParameterSubSchema/properties/in": {
+      "deprecated": false,
+      "title": "",
+      "description": "Determines the location of the parameter.",
+      "examples": [],
+      "types": [
+        "string"
+      ],
+      "options": [
+        "path"
+      ],
+      "uniqueItems": false,
+      "required": []
+    },
+    "http://swagger.io/v2/schema.json#/definitions/pathParameterSubSchema/properties/description": {
+      "deprecated": false,
+      "title": "",
+      "description": "A brief description of the parameter. This could contain examples of use.  GitHub Flavored Markdown is allowed.",
+      "examples": [],
+      "types": [
+        "string"
+      ],
+      "uniqueItems": false,
+      "required": []
+    },
+    "http://swagger.io/v2/schema.json#/definitions/pathParameterSubSchema/properties/name": {
+      "deprecated": false,
+      "title": "",
+      "description": "The name of the parameter.",
+      "examples": [],
+      "types": [
+        "string"
+      ],
+      "uniqueItems": false,
+      "required": []
+    },
+    "http://swagger.io/v2/schema.json#/definitions/pathParameterSubSchema/properties/type": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [
+        "string"
+      ],
+      "options": [
+        "string",
+        "number",
+        "boolean",
+        "integer",
+        "array"
+      ],
+      "uniqueItems": false,
+      "required": []
+    },
+    "http://swagger.io/v2/schema.json#/definitions/pathParameterSubSchema/properties/format": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [
+        "string"
+      ],
+      "uniqueItems": false,
+      "required": []
+    },
+    "http://swagger.io/v2/schema.json#/definitions/pathParameterSubSchema/properties/items": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/primitivesItems"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/pathParameterSubSchema/properties/collectionFormat": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/collectionFormat"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/pathParameterSubSchema/properties/default": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/default"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/pathParameterSubSchema/properties/maximum": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/maximum"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/pathParameterSubSchema/properties/exclusiveMaximum": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/exclusiveMaximum"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/pathParameterSubSchema/properties/minimum": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/minimum"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/pathParameterSubSchema/properties/exclusiveMinimum": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/exclusiveMinimum"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/pathParameterSubSchema/properties/maxLength": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/maxLength"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/pathParameterSubSchema/properties/minLength": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/minLength"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/pathParameterSubSchema/properties/pattern": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/pattern"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/pathParameterSubSchema/properties/maxItems": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/maxItems"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/pathParameterSubSchema/properties/minItems": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/minItems"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/pathParameterSubSchema/properties/uniqueItems": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/uniqueItems"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/pathParameterSubSchema/properties/enum": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/enum"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/pathParameterSubSchema/properties/multipleOf": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/multipleOf"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/pathParameterSubSchema/additionalProperties": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [
+        "never"
+      ],
+      "uniqueItems": false,
+      "required": []
+    },
+    "http://swagger.io/v2/schema.json#/definitions/pathParameterSubSchema/patternProperties/^x-": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/vendorExtension"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/nonBodyParameter/oneOf/0": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/headerParameterSubSchema"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/nonBodyParameter/oneOf/1": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/formDataParameterSubSchema"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/nonBodyParameter/oneOf/2": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/queryParameterSubSchema"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/nonBodyParameter/oneOf/3": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/pathParameterSubSchema"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/parameter/oneOf/0": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/bodyParameter"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/parameter/oneOf/1": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/nonBodyParameter"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/schema/properties/$ref": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [
+        "string"
+      ],
+      "uniqueItems": false,
+      "required": []
+    },
+    "http://swagger.io/v2/schema.json#/definitions/schema/properties/format": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [
+        "string"
+      ],
+      "uniqueItems": false,
+      "required": []
+    },
+    "http://swagger.io/v2/schema.json#/definitions/schema/properties/title": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://json-schema.org/draft-04/schema#/properties/title"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/schema/properties/description": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://json-schema.org/draft-04/schema#/properties/description"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/schema/properties/default": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://json-schema.org/draft-04/schema#/properties/default"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/schema/properties/multipleOf": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://json-schema.org/draft-04/schema#/properties/multipleOf"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/schema/properties/maximum": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://json-schema.org/draft-04/schema#/properties/maximum"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/schema/properties/exclusiveMaximum": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://json-schema.org/draft-04/schema#/properties/exclusiveMaximum"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/schema/properties/minimum": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://json-schema.org/draft-04/schema#/properties/minimum"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/schema/properties/exclusiveMinimum": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://json-schema.org/draft-04/schema#/properties/exclusiveMinimum"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/schema/properties/maxLength": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://json-schema.org/draft-04/schema#/definitions/positiveInteger"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/schema/properties/minLength": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://json-schema.org/draft-04/schema#/definitions/positiveIntegerDefault0"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/schema/properties/pattern": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://json-schema.org/draft-04/schema#/properties/pattern"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/schema/properties/maxItems": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://json-schema.org/draft-04/schema#/definitions/positiveInteger"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/schema/properties/minItems": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://json-schema.org/draft-04/schema#/definitions/positiveIntegerDefault0"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/schema/properties/uniqueItems": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://json-schema.org/draft-04/schema#/properties/uniqueItems"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/schema/properties/maxProperties": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://json-schema.org/draft-04/schema#/definitions/positiveInteger"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/schema/properties/minProperties": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://json-schema.org/draft-04/schema#/definitions/positiveIntegerDefault0"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/schema/properties/required": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://json-schema.org/draft-04/schema#/definitions/stringArray"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/schema/properties/enum": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://json-schema.org/draft-04/schema#/properties/enum"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/schema/properties/additionalProperties": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "anyOf": [
+        "http://swagger.io/v2/schema.json#/definitions/schema/properties/additionalProperties/anyOf/0",
+        "http://swagger.io/v2/schema.json#/definitions/schema/properties/additionalProperties/anyOf/1"
+      ]
+    },
+    "http://swagger.io/v2/schema.json#/definitions/schema/properties/type": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://json-schema.org/draft-04/schema#/properties/type"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/schema/properties/items": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "anyOf": [
+        "http://swagger.io/v2/schema.json#/definitions/schema/properties/items/anyOf/0",
+        "http://swagger.io/v2/schema.json#/definitions/schema/properties/items/anyOf/1"
+      ]
+    },
+    "http://swagger.io/v2/schema.json#/definitions/schema/properties/allOf": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [
+        "array"
+      ],
+      "minimumItems": 1,
+      "uniqueItems": false,
+      "required": [],
+      "arrayItems": "http://swagger.io/v2/schema.json#/definitions/schema/properties/allOf/items"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/schema/properties/properties": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [
+        "map"
+      ],
+      "uniqueItems": false,
+      "required": [],
+      "mapProperties": "http://swagger.io/v2/schema.json#/definitions/schema/properties/properties/additionalProperties"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/schema/properties/discriminator": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [
+        "string"
+      ],
+      "uniqueItems": false,
+      "required": []
+    },
+    "http://swagger.io/v2/schema.json#/definitions/schema/properties/readOnly": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [
+        "boolean"
+      ],
+      "uniqueItems": false,
+      "required": []
+    },
+    "http://swagger.io/v2/schema.json#/definitions/schema/properties/xml": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/xml"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/schema/properties/externalDocs": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/externalDocs"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/schema/properties/example": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": []
+    },
+    "http://swagger.io/v2/schema.json#/definitions/schema/additionalProperties": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [
+        "never"
+      ],
+      "uniqueItems": false,
+      "required": []
+    },
+    "http://swagger.io/v2/schema.json#/definitions/schema/patternProperties/^x-": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/vendorExtension"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/fileSchema/properties/format": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [
+        "string"
+      ],
+      "uniqueItems": false,
+      "required": []
+    },
+    "http://swagger.io/v2/schema.json#/definitions/fileSchema/properties/title": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://json-schema.org/draft-04/schema#/properties/title"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/fileSchema/properties/description": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://json-schema.org/draft-04/schema#/properties/description"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/fileSchema/properties/default": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://json-schema.org/draft-04/schema#/properties/default"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/fileSchema/properties/required": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://json-schema.org/draft-04/schema#/definitions/stringArray"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/fileSchema/properties/type": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [
+        "string"
+      ],
+      "options": [
+        "file"
+      ],
+      "uniqueItems": false,
+      "required": []
+    },
+    "http://swagger.io/v2/schema.json#/definitions/fileSchema/properties/readOnly": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [
+        "boolean"
+      ],
+      "uniqueItems": false,
+      "required": []
+    },
+    "http://swagger.io/v2/schema.json#/definitions/fileSchema/properties/externalDocs": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/externalDocs"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/fileSchema/properties/example": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": []
+    },
+    "http://swagger.io/v2/schema.json#/definitions/fileSchema/additionalProperties": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [
+        "never"
+      ],
+      "uniqueItems": false,
+      "required": []
+    },
+    "http://swagger.io/v2/schema.json#/definitions/fileSchema/patternProperties/^x-": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/vendorExtension"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/primitivesItems/properties/type": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [
+        "string"
+      ],
+      "options": [
+        "string",
+        "number",
+        "integer",
+        "boolean",
+        "array"
+      ],
+      "uniqueItems": false,
+      "required": []
+    },
+    "http://swagger.io/v2/schema.json#/definitions/primitivesItems/properties/format": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [
+        "string"
+      ],
+      "uniqueItems": false,
+      "required": []
+    },
+    "http://swagger.io/v2/schema.json#/definitions/primitivesItems/properties/items": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/primitivesItems"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/primitivesItems/properties/collectionFormat": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/collectionFormat"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/primitivesItems/properties/default": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/default"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/primitivesItems/properties/maximum": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/maximum"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/primitivesItems/properties/exclusiveMaximum": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/exclusiveMaximum"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/primitivesItems/properties/minimum": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/minimum"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/primitivesItems/properties/exclusiveMinimum": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/exclusiveMinimum"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/primitivesItems/properties/maxLength": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/maxLength"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/primitivesItems/properties/minLength": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/minLength"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/primitivesItems/properties/pattern": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/pattern"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/primitivesItems/properties/maxItems": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/maxItems"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/primitivesItems/properties/minItems": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/minItems"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/primitivesItems/properties/uniqueItems": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/uniqueItems"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/primitivesItems/properties/enum": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/enum"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/primitivesItems/properties/multipleOf": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/multipleOf"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/primitivesItems/additionalProperties": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [
+        "never"
+      ],
+      "uniqueItems": false,
+      "required": []
+    },
+    "http://swagger.io/v2/schema.json#/definitions/primitivesItems/patternProperties/^x-": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/vendorExtension"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/security/items": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/securityRequirement"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/securityRequirement/additionalProperties": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [
+        "array"
+      ],
+      "uniqueItems": true,
+      "required": [],
+      "arrayItems": "http://swagger.io/v2/schema.json#/definitions/securityRequirement/additionalProperties/items"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/xml/properties/name": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [
+        "string"
+      ],
+      "uniqueItems": false,
+      "required": []
+    },
+    "http://swagger.io/v2/schema.json#/definitions/xml/properties/namespace": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [
+        "string"
+      ],
+      "uniqueItems": false,
+      "required": []
+    },
+    "http://swagger.io/v2/schema.json#/definitions/xml/properties/prefix": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [
+        "string"
+      ],
+      "uniqueItems": false,
+      "required": []
+    },
+    "http://swagger.io/v2/schema.json#/definitions/xml/properties/attribute": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [
+        "boolean"
+      ],
+      "uniqueItems": false,
+      "required": []
+    },
+    "http://swagger.io/v2/schema.json#/definitions/xml/properties/wrapped": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [
+        "boolean"
+      ],
+      "uniqueItems": false,
+      "required": []
+    },
+    "http://swagger.io/v2/schema.json#/definitions/xml/additionalProperties": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [
+        "never"
+      ],
+      "uniqueItems": false,
+      "required": []
+    },
+    "http://swagger.io/v2/schema.json#/definitions/xml/patternProperties/^x-": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/vendorExtension"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/tag/properties/name": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [
+        "string"
+      ],
+      "uniqueItems": false,
+      "required": []
+    },
+    "http://swagger.io/v2/schema.json#/definitions/tag/properties/description": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [
+        "string"
+      ],
+      "uniqueItems": false,
+      "required": []
+    },
+    "http://swagger.io/v2/schema.json#/definitions/tag/properties/externalDocs": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/externalDocs"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/tag/additionalProperties": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [
+        "never"
+      ],
+      "uniqueItems": false,
+      "required": []
+    },
+    "http://swagger.io/v2/schema.json#/definitions/tag/patternProperties/^x-": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/vendorExtension"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/securityDefinitions/additionalProperties": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "oneOf": [
+        "http://swagger.io/v2/schema.json#/definitions/securityDefinitions/additionalProperties/oneOf/0",
+        "http://swagger.io/v2/schema.json#/definitions/securityDefinitions/additionalProperties/oneOf/1",
+        "http://swagger.io/v2/schema.json#/definitions/securityDefinitions/additionalProperties/oneOf/2",
+        "http://swagger.io/v2/schema.json#/definitions/securityDefinitions/additionalProperties/oneOf/3",
+        "http://swagger.io/v2/schema.json#/definitions/securityDefinitions/additionalProperties/oneOf/4",
+        "http://swagger.io/v2/schema.json#/definitions/securityDefinitions/additionalProperties/oneOf/5"
+      ]
+    },
+    "http://swagger.io/v2/schema.json#/definitions/basicAuthenticationSecurity/properties/type": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [
+        "string"
+      ],
+      "options": [
+        "basic"
+      ],
+      "uniqueItems": false,
+      "required": []
+    },
+    "http://swagger.io/v2/schema.json#/definitions/basicAuthenticationSecurity/properties/description": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [
+        "string"
+      ],
+      "uniqueItems": false,
+      "required": []
+    },
+    "http://swagger.io/v2/schema.json#/definitions/basicAuthenticationSecurity/additionalProperties": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [
+        "never"
+      ],
+      "uniqueItems": false,
+      "required": []
+    },
+    "http://swagger.io/v2/schema.json#/definitions/basicAuthenticationSecurity/patternProperties/^x-": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/vendorExtension"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/apiKeySecurity/properties/type": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [
+        "string"
+      ],
+      "options": [
+        "apiKey"
+      ],
+      "uniqueItems": false,
+      "required": []
+    },
+    "http://swagger.io/v2/schema.json#/definitions/apiKeySecurity/properties/name": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [
+        "string"
+      ],
+      "uniqueItems": false,
+      "required": []
+    },
+    "http://swagger.io/v2/schema.json#/definitions/apiKeySecurity/properties/in": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [
+        "string"
+      ],
+      "options": [
+        "header",
+        "query"
+      ],
+      "uniqueItems": false,
+      "required": []
+    },
+    "http://swagger.io/v2/schema.json#/definitions/apiKeySecurity/properties/description": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [
+        "string"
+      ],
+      "uniqueItems": false,
+      "required": []
+    },
+    "http://swagger.io/v2/schema.json#/definitions/apiKeySecurity/additionalProperties": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [
+        "never"
+      ],
+      "uniqueItems": false,
+      "required": []
+    },
+    "http://swagger.io/v2/schema.json#/definitions/apiKeySecurity/patternProperties/^x-": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/vendorExtension"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/oauth2ImplicitSecurity/properties/type": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [
+        "string"
+      ],
+      "options": [
+        "oauth2"
+      ],
+      "uniqueItems": false,
+      "required": []
+    },
+    "http://swagger.io/v2/schema.json#/definitions/oauth2ImplicitSecurity/properties/flow": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [
+        "string"
+      ],
+      "options": [
+        "implicit"
+      ],
+      "uniqueItems": false,
+      "required": []
+    },
+    "http://swagger.io/v2/schema.json#/definitions/oauth2ImplicitSecurity/properties/scopes": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/oauth2Scopes"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/oauth2ImplicitSecurity/properties/authorizationUrl": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [
+        "string"
+      ],
+      "valueFormat": "uri",
+      "uniqueItems": false,
+      "required": []
+    },
+    "http://swagger.io/v2/schema.json#/definitions/oauth2ImplicitSecurity/properties/description": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [
+        "string"
+      ],
+      "uniqueItems": false,
+      "required": []
+    },
+    "http://swagger.io/v2/schema.json#/definitions/oauth2ImplicitSecurity/additionalProperties": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [
+        "never"
+      ],
+      "uniqueItems": false,
+      "required": []
+    },
+    "http://swagger.io/v2/schema.json#/definitions/oauth2ImplicitSecurity/patternProperties/^x-": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/vendorExtension"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/oauth2PasswordSecurity/properties/type": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [
+        "string"
+      ],
+      "options": [
+        "oauth2"
+      ],
+      "uniqueItems": false,
+      "required": []
+    },
+    "http://swagger.io/v2/schema.json#/definitions/oauth2PasswordSecurity/properties/flow": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [
+        "string"
+      ],
+      "options": [
+        "password"
+      ],
+      "uniqueItems": false,
+      "required": []
+    },
+    "http://swagger.io/v2/schema.json#/definitions/oauth2PasswordSecurity/properties/scopes": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/oauth2Scopes"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/oauth2PasswordSecurity/properties/tokenUrl": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [
+        "string"
+      ],
+      "valueFormat": "uri",
+      "uniqueItems": false,
+      "required": []
+    },
+    "http://swagger.io/v2/schema.json#/definitions/oauth2PasswordSecurity/properties/description": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [
+        "string"
+      ],
+      "uniqueItems": false,
+      "required": []
+    },
+    "http://swagger.io/v2/schema.json#/definitions/oauth2PasswordSecurity/additionalProperties": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [
+        "never"
+      ],
+      "uniqueItems": false,
+      "required": []
+    },
+    "http://swagger.io/v2/schema.json#/definitions/oauth2PasswordSecurity/patternProperties/^x-": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/vendorExtension"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/oauth2ApplicationSecurity/properties/type": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [
+        "string"
+      ],
+      "options": [
+        "oauth2"
+      ],
+      "uniqueItems": false,
+      "required": []
+    },
+    "http://swagger.io/v2/schema.json#/definitions/oauth2ApplicationSecurity/properties/flow": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [
+        "string"
+      ],
+      "options": [
+        "application"
+      ],
+      "uniqueItems": false,
+      "required": []
+    },
+    "http://swagger.io/v2/schema.json#/definitions/oauth2ApplicationSecurity/properties/scopes": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/oauth2Scopes"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/oauth2ApplicationSecurity/properties/tokenUrl": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [
+        "string"
+      ],
+      "valueFormat": "uri",
+      "uniqueItems": false,
+      "required": []
+    },
+    "http://swagger.io/v2/schema.json#/definitions/oauth2ApplicationSecurity/properties/description": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [
+        "string"
+      ],
+      "uniqueItems": false,
+      "required": []
+    },
+    "http://swagger.io/v2/schema.json#/definitions/oauth2ApplicationSecurity/additionalProperties": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [
+        "never"
+      ],
+      "uniqueItems": false,
+      "required": []
+    },
+    "http://swagger.io/v2/schema.json#/definitions/oauth2ApplicationSecurity/patternProperties/^x-": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/vendorExtension"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/oauth2AccessCodeSecurity/properties/type": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [
+        "string"
+      ],
+      "options": [
+        "oauth2"
+      ],
+      "uniqueItems": false,
+      "required": []
+    },
+    "http://swagger.io/v2/schema.json#/definitions/oauth2AccessCodeSecurity/properties/flow": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [
+        "string"
+      ],
+      "options": [
+        "accessCode"
+      ],
+      "uniqueItems": false,
+      "required": []
+    },
+    "http://swagger.io/v2/schema.json#/definitions/oauth2AccessCodeSecurity/properties/scopes": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/oauth2Scopes"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/oauth2AccessCodeSecurity/properties/authorizationUrl": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [
+        "string"
+      ],
+      "valueFormat": "uri",
+      "uniqueItems": false,
+      "required": []
+    },
+    "http://swagger.io/v2/schema.json#/definitions/oauth2AccessCodeSecurity/properties/tokenUrl": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [
+        "string"
+      ],
+      "valueFormat": "uri",
+      "uniqueItems": false,
+      "required": []
+    },
+    "http://swagger.io/v2/schema.json#/definitions/oauth2AccessCodeSecurity/properties/description": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [
+        "string"
+      ],
+      "uniqueItems": false,
+      "required": []
+    },
+    "http://swagger.io/v2/schema.json#/definitions/oauth2AccessCodeSecurity/additionalProperties": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [
+        "never"
+      ],
+      "uniqueItems": false,
+      "required": []
+    },
+    "http://swagger.io/v2/schema.json#/definitions/oauth2AccessCodeSecurity/patternProperties/^x-": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/vendorExtension"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/oauth2Scopes/additionalProperties": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [
+        "string"
+      ],
+      "uniqueItems": false,
+      "required": []
+    },
+    "http://swagger.io/v2/schema.json#/definitions/mediaTypeList/items": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/mimeType"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/parametersList/items": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "oneOf": [
+        "http://swagger.io/v2/schema.json#/definitions/parametersList/items/oneOf/0",
+        "http://swagger.io/v2/schema.json#/definitions/parametersList/items/oneOf/1"
+      ]
+    },
+    "http://swagger.io/v2/schema.json#/definitions/parametersList/additionalItems": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [
+        "never"
+      ],
+      "uniqueItems": false,
+      "required": []
+    },
+    "http://swagger.io/v2/schema.json#/definitions/schemesList/items": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [
+        "string"
+      ],
+      "options": [
+        "http",
+        "https",
+        "ws",
+        "wss"
+      ],
+      "uniqueItems": false,
+      "required": []
+    },
+    "http://swagger.io/v2/schema.json#/definitions/jsonReference/properties/$ref": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [
+        "string"
+      ],
+      "uniqueItems": false,
+      "required": []
+    },
+    "http://swagger.io/v2/schema.json#/definitions/jsonReference/additionalProperties": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [
+        "never"
+      ],
+      "uniqueItems": false,
+      "required": []
+    },
+    "http://swagger.io/v2/schema.json#/properties/consumes/allOf/0": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/mediaTypeList"
+    },
+    "http://swagger.io/v2/schema.json#/properties/produces/allOf/0": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/mediaTypeList"
+    },
+    "http://swagger.io/v2/schema.json#/properties/tags/items": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/tag"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/operation/properties/tags/items": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [
+        "string"
+      ],
+      "uniqueItems": false,
+      "required": []
+    },
+    "http://swagger.io/v2/schema.json#/definitions/operation/properties/produces/allOf/0": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/mediaTypeList"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/operation/properties/consumes/allOf/0": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/mediaTypeList"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/responses/not/additionalProperties": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [
+        "never"
+      ],
+      "uniqueItems": false,
+      "required": []
+    },
+    "http://swagger.io/v2/schema.json#/definitions/responses/not/patternProperties/^x-": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/vendorExtension"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/response/properties/schema/oneOf/0": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/schema"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/response/properties/schema/oneOf/1": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/fileSchema"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/schema/properties/additionalProperties/anyOf/0": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/schema"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/schema/properties/additionalProperties/anyOf/1": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [
+        "boolean"
+      ],
+      "uniqueItems": false,
+      "required": []
+    },
+    "http://swagger.io/v2/schema.json#/definitions/schema/properties/items/anyOf/0": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/schema"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/schema/properties/items/anyOf/1": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [
+        "array"
+      ],
+      "minimumItems": 1,
+      "uniqueItems": false,
+      "required": [],
+      "arrayItems": "http://swagger.io/v2/schema.json#/definitions/schema/properties/items/anyOf/1/items"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/schema/properties/allOf/items": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/schema"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/schema/properties/properties/additionalProperties": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/schema"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/securityRequirement/additionalProperties/items": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [
+        "string"
+      ],
+      "uniqueItems": false,
+      "required": []
+    },
+    "http://swagger.io/v2/schema.json#/definitions/securityDefinitions/additionalProperties/oneOf/0": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/basicAuthenticationSecurity"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/securityDefinitions/additionalProperties/oneOf/1": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/apiKeySecurity"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/securityDefinitions/additionalProperties/oneOf/2": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/oauth2ImplicitSecurity"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/securityDefinitions/additionalProperties/oneOf/3": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/oauth2PasswordSecurity"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/securityDefinitions/additionalProperties/oneOf/4": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/oauth2ApplicationSecurity"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/securityDefinitions/additionalProperties/oneOf/5": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/oauth2AccessCodeSecurity"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/parametersList/items/oneOf/0": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/parameter"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/parametersList/items/oneOf/1": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/jsonReference"
+    },
+    "http://swagger.io/v2/schema.json#/definitions/schema/properties/items/anyOf/1/items": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://swagger.io/v2/schema.json#/definitions/schema"
+    },
+    "http://json-schema.org/draft-04/schema#/properties/title": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [
+        "string"
+      ],
+      "uniqueItems": false,
+      "required": []
+    },
+    "http://json-schema.org/draft-04/schema#/properties/description": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [
+        "string"
+      ],
+      "uniqueItems": false,
+      "required": []
+    },
+    "http://json-schema.org/draft-04/schema#/properties/default": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": []
+    },
+    "http://json-schema.org/draft-04/schema#/properties/multipleOf": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [
+        "number"
+      ],
+      "minimumExclusive": 0,
+      "uniqueItems": false,
+      "required": []
+    },
+    "http://json-schema.org/draft-04/schema#/properties/maximum": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [
+        "number"
+      ],
+      "uniqueItems": false,
+      "required": []
+    },
+    "http://json-schema.org/draft-04/schema#/properties/exclusiveMaximum": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [
+        "boolean"
+      ],
+      "uniqueItems": false,
+      "required": []
+    },
+    "http://json-schema.org/draft-04/schema#/properties/minimum": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [
+        "number"
+      ],
+      "uniqueItems": false,
+      "required": []
+    },
+    "http://json-schema.org/draft-04/schema#/properties/exclusiveMinimum": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [
+        "boolean"
+      ],
+      "uniqueItems": false,
+      "required": []
+    },
+    "http://json-schema.org/draft-04/schema#/definitions/positiveInteger": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [
+        "integer"
+      ],
+      "minimumInclusive": 0,
+      "uniqueItems": false,
+      "required": []
+    },
+    "http://json-schema.org/draft-04/schema#/definitions/positiveIntegerDefault0": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "allOf": [
+        "http://json-schema.org/draft-04/schema#/definitions/positiveIntegerDefault0/allOf/0",
+        "http://json-schema.org/draft-04/schema#/definitions/positiveIntegerDefault0/allOf/1"
+      ]
+    },
+    "http://json-schema.org/draft-04/schema#/definitions/positiveIntegerDefault0/allOf/0": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://json-schema.org/draft-04/schema#/definitions/positiveInteger"
+    },
+    "http://json-schema.org/draft-04/schema#/definitions/positiveIntegerDefault0/allOf/1": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": []
+    },
+    "http://json-schema.org/draft-04/schema#/properties/pattern": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [
+        "string"
+      ],
+      "valueFormat": "regex",
+      "uniqueItems": false,
+      "required": []
+    },
+    "http://json-schema.org/draft-04/schema#/properties/uniqueItems": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [
+        "boolean"
+      ],
+      "uniqueItems": false,
+      "required": []
+    },
+    "http://json-schema.org/draft-04/schema#/properties/enum": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [
+        "array"
+      ],
+      "minimumItems": 1,
+      "uniqueItems": true,
+      "required": []
+    },
+    "http://json-schema.org/draft-04/schema#/definitions/stringArray": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [
+        "array"
+      ],
+      "minimumItems": 1,
+      "uniqueItems": true,
+      "required": [],
+      "arrayItems": "http://json-schema.org/draft-04/schema#/definitions/stringArray/items"
+    },
+    "http://json-schema.org/draft-04/schema#/definitions/stringArray/items": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [
+        "string"
+      ],
+      "uniqueItems": false,
+      "required": []
+    },
+    "http://json-schema.org/draft-04/schema#/properties/type": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "anyOf": [
+        "http://json-schema.org/draft-04/schema#/properties/type/anyOf/0",
+        "http://json-schema.org/draft-04/schema#/properties/type/anyOf/1"
+      ]
+    },
+    "http://json-schema.org/draft-04/schema#/properties/type/anyOf/0": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://json-schema.org/draft-04/schema#/definitions/simpleTypes"
+    },
+    "http://json-schema.org/draft-04/schema#/properties/type/anyOf/1": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [
+        "array"
+      ],
+      "minimumItems": 1,
+      "uniqueItems": true,
+      "required": [],
+      "arrayItems": "http://json-schema.org/draft-04/schema#/properties/type/anyOf/1/items"
+    },
+    "http://json-schema.org/draft-04/schema#/properties/type/anyOf/1/items": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [],
+      "uniqueItems": false,
+      "required": [],
+      "reference": "http://json-schema.org/draft-04/schema#/definitions/simpleTypes"
+    },
+    "http://json-schema.org/draft-04/schema#/definitions/simpleTypes": {
+      "deprecated": false,
+      "title": "",
+      "description": "",
+      "examples": [],
+      "types": [
+        "string"
+      ],
+      "options": [
+        "array",
+        "boolean",
+        "integer",
+        "null",
+        "number",
+        "object",
+        "string"
+      ],
+      "uniqueItems": false,
+      "required": []
+    }
+  }
+}

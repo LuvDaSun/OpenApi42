@@ -1,6 +1,6 @@
 {
   "name": "oa42-lib",
-  "version": "0.4.5",
+  "version": "0.4.6",
   "description": "",
   "type": "module",
   "main": "./out/main.js",
@@ -16,6 +16,8 @@
     "./src/**/*"
   ],
   "scripts": {
+    "prepack": "npm install --no-workspaces",
+    "prepare": "tsc --build",
     "build": "tsc --build ",
     "clean": "rm -rf out",
     "test": "node --test ./out/**/*.test.js",
@@ -36,9 +38,9 @@
     "library"
   ],
   "dependencies": {
-    "@types/node": "^20.9.3",
+    "@types/node": "^20.10.3",
     "tslib": "^2.6.2",
-    "type-fest": "^4.8.1"
+    "type-fest": "^4.8.3"
   },
   "devDependencies": {
     "@tsconfig/node20": "^20.1.2",
